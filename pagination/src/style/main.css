@@ -1,0 +1,325 @@
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	display: block;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+a {
+	background-color: transparent;
+}
+
+img {
+	border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+button,
+input {
+	/* 1 */
+	overflow: visible;
+}
+
+button,
+select {
+	/* 1 */
+	text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+textarea {
+	overflow: auto;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.o-container {
+	width: 100%;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 576px) {
+	.o-container {
+		max-width: 450px;
+	}
+}
+@media (min-width: 768px) {
+	.o-container {
+		max-width: 740px;
+	}
+}
+@media (min-width: 992px) {
+	.o-container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1250px) {
+	.o-container {
+		max-width: 1250px;
+	}
+}
+
+/* ==========================================================================
+   #PAGINATON
+   ========================================================================== */
+
+.pagination-container {
+	display: flex;
+	list-style-type: none;
+	/* margin: 0 auto; */
+	display: flex;
+	line-height: 1.43;
+	font-size: 14px;
+}
+
+.pagination-container li.pagination-item {
+	/* padding: 0 12px;
+	height: 32px; */
+	/* text-align: center; */
+	/* margin: auto 4px; */
+	color: rgba(0, 0, 0, 0.87);
+	/* box-sizing: border-box; */
+	align-items: center;
+	letter-spacing: 0.01071em;
+	/* border-radius: 16px; */
+	/* min-width: 32px; */
+}
+
+.pagination-container li.pagination-item {
+	text-align: center;
+	flex: 1;
+}
+
+.pagination-container .pagination-item.dots:hover {
+	background-color: transparent;
+	cursor: default;
+}
+
+.pagination-container .pagination-item.selected a {
+	background-color: rgba(0, 0, 0, 0.08);
+}
+.pagination-container .pagination-item .arrow::before {
+	position: relative;
+	/* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+	content: "";
+	/* By using an em scale, the arrows will size with the font */
+	display: inline-block;
+	width: 0.4em;
+	height: 0.4em;
+	border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+	border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+}
+.pagination-container .pagination-item .arrow.left {
+	/* transform: rotate(-135deg) translate(-50%); */
+	transform: rotate(225deg);
+}
+.pagination-container .pagination-item .arrow.right {
+	transform: rotate(45deg);
+}
+.pagination-container .pagination-item.disabled a {
+	pointer-events: none;
+}
+.pagination-container .pagination-item.disabled .arrow::before {
+	border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+	border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+.pagination-container .pagination-item.disabled a:hover {
+	background-color: transparent;
+	cursor: default;
+}
+
+.pagination-container .pagination-item .arrow {
+	display: inline-block;
+	width: 15px;
+	padding: 4px 8px;
+	text-align: center;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #000000;
+	cursor: pointer;
+}
+
+.pagination-container .pagination-item a {
+	display: inline-block;
+	width: 15px;
+	padding: 4px 8px;
+	text-align: center;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #000000;
+	cursor: pointer;
+}
+
+.pagination-container .pagination-item a:hover,
+.pagination-container .pagination-item .arrow:hover {
+	background-color: rgba(0, 0, 0, 0.04);
+	cursor: pointer;
+}
