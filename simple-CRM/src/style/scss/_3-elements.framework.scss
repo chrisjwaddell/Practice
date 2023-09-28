@@ -1,0 +1,66 @@
+/* ==========================================================================
+   #BASE-FRAMEWORK
+   ========================================================================== */
+
+/**
+ * CSS framework code that's handy
+ *
+ */
+
+.mac {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dib {
+	display: inline-block;
+}
+
+.db {
+	display: block;
+}
+
+.dn {
+	display: none;
+}
+
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+}
+
+.h100 {
+	height: 100%;
+}
+
+.mt3 {
+	margin-top: 3rem;
+}
+
+// Usually used for testing
+.b-black {
+	border: 1px solid #000000;
+}
+
+.mt-tiny {
+	margin-top: $inuit-global-spacing-unit-tiny;
+}
+
+.mt-small {
+	margin-top: $inuit-global-spacing-unit-small;
+}
+
+.mt {
+	margin-top: $inuit-global-spacing-unit;
+}
+
+.mt-large {
+	margin-top: $inuit-global-spacing-unit-large;
+}
+
+.mt-huge {
+	margin-top: $inuit-global-spacing-unit-huge;
+}

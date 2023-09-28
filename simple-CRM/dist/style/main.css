@@ -1,0 +1,2387 @@
+@charset "UTF-8";
+/* ==========================================================================
+   #MAIN
+   ========================================================================== */
+/*
+    $color-  are global color variables
+    $global-- are globals set in .global.scss
+*/
+/* put global CSS variables here */
+/* l-colour or brand-colour */
+/* .<l-colour> { color: var(--<l-colour>); }
+.bg-<l-colour> { background-color: var(--<l-colour>); }
+.b-<l-colour> { border-color: var(--<l-colour>); }
+.hover-<l-colour>:hover { color: var(--<l-colour>); }
+.hover-bg-<l-colour>:hover { background-color: var(--<l-colour>); }
+.hover-b-<l-colour>:hover { border-color: var(--<l-colour>); } */
+/*
+    $color-  are global color variables
+    $global-- are globals set in .global.scss
+*/
+/* CUSTOM COLOURS */
+/* colour - color, background, border, hover */
+/* I may need 2 or 3 of these */
+/* This is handy for inline css, css only for that page
+*  l-colour or brand-colour
+* Work out how I'll do this, I don't want many css variables
+* maybe just --color-brand, --color-primary, --color-secondary
+*/
+/* Not sure how to use these classes */
+.c-p {
+  color: #7b00b1;
+}
+
+.bg-p {
+  background-color: #7b00b1;
+}
+
+.b-p {
+  border-color: #7b00b1;
+}
+
+.hover-c-p:hover {
+  color: #7b00b1;
+}
+
+.hover-bg-p:hover {
+  background-color: #7b00b1;
+}
+
+.hover-b-p:hover {
+  border-color: #7b00b1;
+}
+
+.c-s {
+  color: #ccccff;
+}
+
+.bg-s {
+  background-color: #ccccff;
+}
+
+.b-s {
+  border-color: #ccccff;
+}
+
+.hover-c-s:hover {
+  color: #ccccff;
+}
+
+.hover-bg-s:hover {
+  background-color: #ccccff;
+}
+
+.hover-b-s:hover {
+  border-color: #ccccff;
+}
+
+.c-t {
+  color: #7777ff;
+}
+
+.bg-t {
+  background-color: #7777ff;
+}
+
+.b-t {
+  border-color: #7777ff;
+}
+
+.hover-c-t:hover {
+  color: #7777ff;
+}
+
+.hover-bg-t:hover {
+  background-color: #7777ff;
+}
+
+.hover-b-t:hover {
+  border-color: #7777ff;
+}
+
+.c-white {
+  color: #ffffff;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.c-black {
+  color: #000000;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.c-red {
+  color: red;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.b-warn {
+  border-color: #c23934 !important;
+}
+
+.bg-warn {
+  background-color: #f6e2e1 !important;
+}
+
+/* border, hover, outline colors should be set
+  depending on what type of field it is
+  set in fields.scss
+*/
+/* ==========================================================================
+   #MIXINS
+   ========================================================================== */
+/* ==========================================================================
+   #BOX-SIZING
+   ========================================================================== */
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* ==========================================================================
+   #NORMALIZE
+   ========================================================================== */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/* Mozilla puts a dotted line around text when a button is selected */
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+
+f input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+/**
+ * As well as using normalize.css, it is often advantageous to remove all
+ * margins from certain elements.
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+figure,
+table,
+th,
+td,
+caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u,
+ins {
+  text-decoration: none;
+}
+
+/**
+ * Apply faux underlines to inserted text via `border-bottom`.
+ */
+ins {
+  border-bottom: 1px solid;
+}
+
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+/**
+ * All font-sizes are based on the rem (root em). This makes it easier to increase font size on
+ * small devices and generally easier to manage. 
+ * rem is like a CSS variable for typography.
+ * <p> default font-size: 1.25rem
+ */
+:root {
+  font-size: 16px;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+input,
+button,
+optgroup,
+select,
+textarea {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/* set this as a default for p font. 16-20px is standard for desktop view. 16px is rem */
+p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 899px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+hr,
+table,
+fieldset,
+figure,
+pre {
+  margin-bottom: 1.5rem;
+}
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once,here.
+ */
+ul,
+ol,
+dd {
+  margin-left: 1rem;
+}
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+/**
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ */
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.1666666667;
+}
+
+h2 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.2857142857;
+}
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+}
+
+h6 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #ccccff;
+}
+
+a {
+  text-decoration: none;
+  color: #3980f2;
+  cursor: pointer;
+}
+
+.a--primary {
+  position: relative;
+  color: #3980f2;
+  font-weight: 700;
+  z-index: 600;
+  text-decoration: none;
+  font-family: arial, helvetica, sans-serif;
+}
+.a--primary:focus, .a--primary:active {
+  outline: 3px dotted #7b00b1;
+  outline-offset: 2px !important;
+}
+.a--primary:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 0.2rem;
+  background: #7b00b1;
+  transition: 0.2s;
+  transition: height 0.4s linear, height 0.2s linear;
+  z-index: -1;
+}
+
+.a--primary:hover:after {
+  height: 1.3rem;
+}
+
+/* ==========================================================================
+   #FIELDS
+   ========================================================================== */
+/**
+ * This gives default sizes for <input> and <label>. Settings taken from
+ * global settings
+ * _3-elements.input.scss comes after this, it has code for color and variants
+ * input HTML should include placeholder, required and tabindex attributes
+ */
+/*
+ * https://codepen.io/zellwk/pen/NeRaPw
+* input box empty, uses ::placeholder-shown
+ */
+/*
+    If you use e-input--primary and e-input--secondary
+    These settings will be overwritten but can be used as a
+    fallback
+*/
+label,
+input {
+  margin: 0 auto;
+}
+
+label {
+  font-size: 16px;
+  /* font-weight: $lbl-font-weight; */
+}
+
+input {
+  width: 275px;
+  height: 41px;
+  font-size: 18px;
+  color: #3d474d;
+  background-color: #b918ff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #7b00b1;
+  line-height: 1;
+}
+input:hover, input:focus, input:active {
+  background-color: #7b00b1;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+input:focus, input:active {
+  background-color: #7b00b1;
+  outline: none;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+input:placeholder-shown {
+  background-color: #b918ff;
+}
+
+.fld-label {
+  padding: 0 0 0 5px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.fld-chk {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #d3d6db;
+  outline: none;
+  cursor: pointer;
+  /* box-shadow: 4px 6px 5px -3px #e5e5e5; */
+  -webkit-transition: all ease-in-out 0.4s, box-shadow ease-in-out 0.15s;
+  transition: all ease-in-out 0.4s, box-shadow ease-in-out 0.15s;
+}
+
+.fld-chk:hover {
+  color: #aeb1b5;
+  color: #ffffff;
+  border: 1px solid #7b00b1;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.04), 4px 4px 4px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.04), 4px 4px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.04), 4px 4px 4px rgba(0, 0, 0, 0.04);
+  /* -webkit-transition: all ease-in-out .35s, box-shadow ease-in-out .15s;
+       transition: all ease-in-out .35s, box-shadow ease-in-out .15s; */
+}
+
+.fld-chk:checked:hover {
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.04), 4px 4px 4px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.04), 4px 4px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.04), 4px 4px 4px rgba(0, 0, 0, 0.04);
+}
+
+.fld-chk::after {
+  content: "✔";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  line-height: 1;
+  font-size: 16px;
+  padding-top: 2px;
+  box-sizing: content-box;
+}
+
+.fld-chk:checked {
+  background-color: #3cb371;
+  /* box-shadow: none; */
+  color: transparent;
+  border: none;
+}
+
+.fld-chk:checked::after {
+  opacity: 1;
+}
+
+.fld-chk:active {
+  transform: scale(0);
+}
+
+.fld-chk:disabled:after {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+.fld-chk:checked:disabled:after {
+  transform: scale(1);
+}
+
+.fld-chk-lbl {
+  /* flex: 1; */
+  display: inline-block;
+  height: 100px;
+  /* block width - tickbox width */
+  font-size: 18px;
+  line-height: 1.25;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+/* ==========================================================================
+   #INPUT
+   ========================================================================== */
+/**
+ * This makes input boxes look nicer instead of the default boring design
+ * For styling, use a style variant
+ * input HTML should include placeholder, required and tabindex attributes
+ */
+/**
+label class - fld-label ( from _3-elements.fields.scss)
+input class - .e-input--primary, .e-input--secondary, .c-input--small, .c-input--large, .e-input--positive, .e-input--negative
+label, input group classes - fld-lbl-row, fld-lbl-column
+
+<div class="fld-lbl-row">
+    <label for="firstname" class="fld-label">First Name</label>
+    <input type="text" id="firstname" name="firstname" class="e-input--primary" placeholder="Your first name ...." value="">
+</div>
+
+<div class="fld-lbl-column">
+    <label for="email" class="fld-label">email</label>
+    <input type="text" id="email" name="email" class="e-input--primary" placeholder="Your email ...." value="">
+</div>
+**/
+/* Style variants
+   ========================================================================== */
+.e-input--primary {
+  height: 2rem;
+  padding: 0.25em 0.5em;
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f7e4ff;
+  border: 2px solid #58007e;
+  border-radius: 6px;
+}
+.e-input--primary:hover, .e-input--primary:focus, .e-input--primary:active {
+  background-color: #f4f4f4;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.e-input--primary:focus, .e-input--primary:active {
+  background-color: #f4f4f4;
+  border: 2px solid #7b00b1;
+  box-shadow: 0 0 0 0.15rem #7b00b1;
+  outline: none;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.e-input--primary:placeholder-shown {
+  background-color: #f7e4ff;
+}
+
+.e-input--secondary {
+  height: 2rem;
+  padding: 0.25em 0.5em;
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: white;
+  border: 2px solid #9999ff;
+  border-radius: 6px;
+}
+.e-input--secondary:hover, .e-input--secondary:focus, .e-input--secondary:active {
+  background-color: #f4f4f4;
+  outline: 2px solid #f4f4f4;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.e-input--secondary:focus, .e-input--secondary:active {
+  background-color: #f4f4f4;
+  border: 2px solid #ccccff;
+  box-shadow: 0 0 0 0.15rem #ccccff;
+  outline: none;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.e-input--secondary:placeholder-shown {
+  background-color: white;
+}
+
+/* Size variants
+   ========================================================================== */
+.c-input--small {
+  padding: 6px 12px;
+}
+
+.c-input--large {
+  padding: 24px 48px;
+}
+
+/**
+ * Positive buttons skin. Extends `.btn`.
+ */
+.e-input--positive {
+  background-color: green;
+  color: white;
+}
+
+/**
+ * Negative buttons skin. Extends `.btn`.
+ */
+.e-input--negative {
+  background-color: red;
+  color: white;
+}
+
+/* Label and field layout
+   ========================================================================== */
+.fld-lbl-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+.fld-lbl-row label {
+  width: 150px;
+}
+
+.fld-lbl-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.fld-lbl-column label,
+.fld-lbl-column input {
+  text-align: left;
+  margin: 0;
+}
+
+/* ==========================================================================
+   #BASE-FRAMEWORK
+   ========================================================================== */
+/**
+ * CSS framework code that's handy
+ *
+ */
+.mac {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.db {
+  display: block;
+}
+
+.dn {
+  display: none;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.mt3 {
+  margin-top: 3rem;
+}
+
+.b-black {
+  border: 1px solid #000000;
+}
+
+.mt-tiny {
+  margin-top: 6px;
+}
+
+.mt-small {
+  margin-top: 12px;
+}
+
+.mt {
+  margin-top: 24px;
+}
+
+.mt-large {
+  margin-top: 48px;
+}
+
+.mt-huge {
+  margin-top: 96px;
+}
+
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+.o-container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .o-container {
+    max-width: 450px;
+  }
+}
+@media (min-width: 768px) {
+  .o-container {
+    max-width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .o-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1250px) {
+  .o-container {
+    max-width: 1250px;
+  }
+}
+/* ==========================================================================
+   #LAYOUT
+   ========================================================================== */
+/**
+ * Grid-like layout system.
+ *
+ * The layout object provides us with a column-style layout system. This file
+ * contains the basic structural elements, but classes should be complemented
+ * with width utilities, for example:
+ *
+ *   <div class="o-layout">
+ *     <div class="o-layout__item  u-1/2">
+ *     </div>
+ *     <div class="o-layout__item  u-1/2">
+ *     </div>
+ *   </div>
+ *
+ * The above will create a two-column structure in which each column will
+ * fluidly fill half of the width of the parent. We can have more complex
+ * systems:
+ *
+ *   <div class="o-layout">
+ *     <div class="o-layout__item  u-1/1  u-1/3@medium">
+ *     </div>
+ *     <div class="o-layout__item  u-1/2  u-1/3@medium">
+ *     </div>
+ *     <div class="o-layout__item  u-1/2  u-1/3@medium">
+ *     </div>
+ *   </div>
+ *
+ * The above will create a system in which the first item will be 100% width
+ * until we enter our medium breakpoint, when it will become 33.333% width. The
+ * second and third items will be 50% of their parent, until they also become
+ * 33.333% width at the medium breakpoint.
+ *
+ * We can also manipulate entire layout systems by adding a series of modifiers
+ * to the `.o-layout` block. For example:
+ *
+ *   <div class="o-layout  o-layout--reverse">
+ *
+ * This will reverse the displayed order of the system so that it runs in the
+ * opposite order to our source, effectively flipping the system over.
+ *
+ *   <div class="o-layout  o-layout--[right|center]">
+ *
+ * This will cause the system to fill up from either the centre or the right
+ * hand side. Default behaviour is to fill up the layout system from the left.
+ *
+ * There are plenty more options available to us: explore them below.
+ */
+/* Default/mandatory classes
+   ========================================================================== */
+/**
+ * 1. Allows us to use the layout object on any type of element.
+ * 2. We need to defensively reset any box-model properties.
+ * 3. Use the negative margin trick for multi-row grids:
+ *    http://csswizardry.com/2011/08/building-better-grid-systems/
+ */
+.o-layout {
+  display: block;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  list-style: none;
+  /* [1] */
+  margin-left: -24px;
+  /* [3] */
+  font-size: 0;
+}
+
+/**
+   * 1. Required in order to combine fluid widths with fixed gutters.
+   * 2. Allows us to manipulate grids vertically, with text-level properties,
+   *    etc.
+   * 3. Default item alignment is with the tops of each other, like most
+   *    traditional grid/layout systems.
+   * 4. By default, all layout items are full-width (mobile first).
+   * 5. Gutters provided by left padding:
+   *    http://csswizardry.com/2011/08/building-better-grid-systems/
+   * 6. Fallback for old IEs not supporting `rem` values.
+   */
+.o-layout__item {
+  box-sizing: border-box;
+  /* [1] */
+  display: inline-block;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  padding-left: 24px;
+  /* [5] */
+  font-size: 16px;
+  /* [6] */
+  font-size: 1rem;
+}
+
+/* Gutter size modifiers
+   ========================================================================== */
+.o-layout--flush {
+  margin-left: 0;
+}
+.o-layout--flush > .o-layout__item {
+  padding-left: 0;
+}
+
+.o-layout--tiny {
+  margin-left: -6px;
+}
+.o-layout--tiny > .o-layout__item {
+  padding-left: 6px;
+}
+
+.o-layout--small {
+  margin-left: -12px;
+}
+.o-layout--small > .o-layout__item {
+  padding-left: 12px;
+}
+
+.o-layout--large {
+  margin-left: -48px;
+}
+.o-layout--large > .o-layout__item {
+  padding-left: 48px;
+}
+
+.o-layout--huge {
+  margin-left: -96px;
+}
+.o-layout--huge > .o-layout__item {
+  padding-left: 96px;
+}
+
+/* Vertical alignment modifiers
+   ========================================================================== */
+/**
+ * Align all grid items to the middles of each other.
+ */
+.o-layout--middle > .o-layout__item {
+  vertical-align: middle;
+}
+
+/**
+ * Align all grid items to the bottoms of each other.
+ */
+.o-layout--bottom > .o-layout__item {
+  vertical-align: bottom;
+}
+
+/**
+ * Stretch all grid items of each row to have an equal-height.
+ * Please be aware that this modifier class doesn’t take any effect in IE9 and
+ * below and other older browsers due to the lack of `display: flex` support.
+ */
+.o-layout--stretch {
+  display: flex;
+  flex-wrap: wrap;
+}
+.o-layout--stretch > .o-layout__item {
+  display: flex;
+}
+.o-layout--stretch.o-layout--center {
+  justify-content: center;
+}
+.o-layout--stretch.o-layout--right {
+  justify-content: flex-end;
+}
+.o-layout--stretch.o-layout--left {
+  justify-content: flex-start;
+}
+
+/* Fill order modifiers
+   ========================================================================== */
+/**
+ * Fill up the layout system from the centre.
+ */
+.o-layout--center {
+  text-align: center;
+}
+.o-layout--center > .o-layout__item {
+  text-align: left;
+}
+
+/**
+ * Fill up the layout system from the right-hand side.
+ */
+.o-layout--right {
+  text-align: right;
+}
+.o-layout--right > .o-layout__item {
+  text-align: left;
+}
+
+/**
+ * Fill up the layout system from the left-hand side. This will likely only be
+ * needed when using in conjunction with `.o-layout--reverse`.
+ */
+.o-layout--left {
+  text-align: left;
+}
+.o-layout--left > .o-layout__item {
+  text-align: left;
+}
+
+/**
+ * Reverse the rendered order of the grid system.
+ */
+.o-layout--reverse {
+  direction: rtl;
+}
+.o-layout--reverse > .o-layout__item {
+  direction: ltr;
+}
+
+/* Auto-widths modifier
+   ========================================================================== */
+/**
+ * Cause layout items to take up a non-explicit amount of width.
+ */
+.o-layout--auto > .o-layout__item {
+  width: auto;
+}
+
+/*
+ * My code
+   ========================================================================== *
+*/
+.o-center-x {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.o-center-y {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.o-flex {
+  display: flex;
+}
+.o-flex.x--center {
+  justify-content: center;
+}
+.o-flex.x--left {
+  justify-content: flex-start;
+}
+.o-flex.x--right {
+  justify-content: flex-end;
+}
+.o-flex.x--between {
+  justify-content: space-between;
+}
+.o-flex.x--around {
+  justify-content: space-around;
+}
+.o-flex.x--evenly {
+  justify-content: space-evenly;
+}
+.o-flex.y--center {
+  align-items: center;
+}
+.o-flex.y--top {
+  align-items: flex-start;
+}
+.o-flex.y--bottom {
+  align-items: flex-end;
+}
+.o-flex.y--stretch {
+  align-items: stretch;
+}
+.o-flex.y--baseline {
+  align-items: baseline;
+}
+.o-flex.xy--center {
+  justify-content: center;
+  align-items: center;
+}
+
+.o-flex-row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
+}
+
+.o-flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.o-flex-row-reverse {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+  -ms-flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
+}
+
+.o-flex-column-reverse {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: reverse !important;
+  -ms-flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
+}
+
+.o-flex-wrap {
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+}
+
+.o-flex-nowrap {
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
+}
+
+.o-flex-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap-reverse !important;
+}
+
+.o-flex--1 {
+  flex: 1;
+}
+
+.o-flex--2 {
+  flex: 2;
+}
+
+.o-flex--3 {
+  flex: 3;
+}
+
+.o-flex--4 {
+  flex: 4;
+}
+
+.o-layout-x-half {
+  width: 50%;
+}
+
+.o-layout-x-full {
+  width: 100%;
+}
+
+.o-layout-xv-half {
+  width: 50vh;
+}
+
+.o-layout-xv-full {
+  width: 100vh;
+}
+
+.o-layout-yv-half {
+  height: 50vh;
+}
+
+.o-layout-yv-full {
+  height: 100vh;
+}
+
+.o-layout-abs-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.o-layout-abs-cc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.o-layout-abs-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.o-layout-abs-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.o-layout-abs-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.outer-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   #SPACINGS
+   ========================================================================== */
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-margin-top {}
+ *   .u-padding-left-large {}
+ *   .u-margin-right-small {}
+ *   .u-padding {}
+ *   .u-padding-right-none {}
+ *   .u-padding-horizontal {}
+ *   .u-padding-vertical-small {}
+ */
+.u-padding {
+  padding: 24px !important;
+}
+
+.u-padding-tiny {
+  padding: 6px !important;
+}
+
+.u-padding-small {
+  padding: 12px !important;
+}
+
+.u-padding-large {
+  padding: 48px !important;
+}
+
+.u-padding-huge {
+  padding: 96px !important;
+}
+
+.u-padding-none {
+  padding: 0 !important;
+}
+
+.u-padding-top {
+  padding-top: 24px !important;
+}
+
+.u-padding-top-tiny {
+  padding-top: 6px !important;
+}
+
+.u-padding-top-small {
+  padding-top: 12px !important;
+}
+
+.u-padding-top-large {
+  padding-top: 48px !important;
+}
+
+.u-padding-top-huge {
+  padding-top: 96px !important;
+}
+
+.u-padding-top-none {
+  padding-top: 0 !important;
+}
+
+.u-padding-right {
+  padding-right: 24px !important;
+}
+
+.u-padding-right-tiny {
+  padding-right: 6px !important;
+}
+
+.u-padding-right-small {
+  padding-right: 12px !important;
+}
+
+.u-padding-right-large {
+  padding-right: 48px !important;
+}
+
+.u-padding-right-huge {
+  padding-right: 96px !important;
+}
+
+.u-padding-right-none {
+  padding-right: 0 !important;
+}
+
+.u-padding-bottom {
+  padding-bottom: 24px !important;
+}
+
+.u-padding-bottom-tiny {
+  padding-bottom: 6px !important;
+}
+
+.u-padding-bottom-small {
+  padding-bottom: 12px !important;
+}
+
+.u-padding-bottom-large {
+  padding-bottom: 48px !important;
+}
+
+.u-padding-bottom-huge {
+  padding-bottom: 96px !important;
+}
+
+.u-padding-bottom-none {
+  padding-bottom: 0 !important;
+}
+
+.u-padding-left {
+  padding-left: 24px !important;
+}
+
+.u-padding-left-tiny {
+  padding-left: 6px !important;
+}
+
+.u-padding-left-small {
+  padding-left: 12px !important;
+}
+
+.u-padding-left-large {
+  padding-left: 48px !important;
+}
+
+.u-padding-left-huge {
+  padding-left: 96px !important;
+}
+
+.u-padding-left-none {
+  padding-left: 0 !important;
+}
+
+.u-padding-horizontal {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+.u-padding-horizontal-tiny {
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+}
+
+.u-padding-horizontal-small {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.u-padding-horizontal-large {
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+
+.u-padding-horizontal-huge {
+  padding-left: 96px !important;
+  padding-right: 96px !important;
+}
+
+.u-padding-horizontal-none {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.u-padding-vertical {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.u-padding-vertical-tiny {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.u-padding-vertical-small {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+.u-padding-vertical-large {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
+}
+
+.u-padding-vertical-huge {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+}
+
+.u-padding-vertical-none {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.u-margin {
+  margin: 24px !important;
+}
+
+.u-margin-tiny {
+  margin: 6px !important;
+}
+
+.u-margin-small {
+  margin: 12px !important;
+}
+
+.u-margin-large {
+  margin: 48px !important;
+}
+
+.u-margin-huge {
+  margin: 96px !important;
+}
+
+.u-margin-none {
+  margin: 0 !important;
+}
+
+.u-margin-top {
+  margin-top: 24px !important;
+}
+
+.u-margin-top-tiny {
+  margin-top: 6px !important;
+}
+
+.u-margin-top-small {
+  margin-top: 12px !important;
+}
+
+.u-margin-top-large {
+  margin-top: 48px !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 96px !important;
+}
+
+.u-margin-top-none {
+  margin-top: 0 !important;
+}
+
+.u-margin-right {
+  margin-right: 24px !important;
+}
+
+.u-margin-right-tiny {
+  margin-right: 6px !important;
+}
+
+.u-margin-right-small {
+  margin-right: 12px !important;
+}
+
+.u-margin-right-large {
+  margin-right: 48px !important;
+}
+
+.u-margin-right-huge {
+  margin-right: 96px !important;
+}
+
+.u-margin-right-none {
+  margin-right: 0 !important;
+}
+
+.u-margin-bottom {
+  margin-bottom: 24px !important;
+}
+
+.u-margin-bottom-tiny {
+  margin-bottom: 6px !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 12px !important;
+}
+
+.u-margin-bottom-large {
+  margin-bottom: 48px !important;
+}
+
+.u-margin-bottom-huge {
+  margin-bottom: 96px !important;
+}
+
+.u-margin-bottom-none {
+  margin-bottom: 0 !important;
+}
+
+.u-margin-left {
+  margin-left: 24px !important;
+}
+
+.u-margin-left-tiny {
+  margin-left: 6px !important;
+}
+
+.u-margin-left-small {
+  margin-left: 12px !important;
+}
+
+.u-margin-left-large {
+  margin-left: 48px !important;
+}
+
+.u-margin-left-huge {
+  margin-left: 96px !important;
+}
+
+.u-margin-left-none {
+  margin-left: 0 !important;
+}
+
+.u-margin-horizontal {
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+}
+
+.u-margin-horizontal-tiny {
+  margin-left: 6px !important;
+  margin-right: 6px !important;
+}
+
+.u-margin-horizontal-small {
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+}
+
+.u-margin-horizontal-large {
+  margin-left: 48px !important;
+  margin-right: 48px !important;
+}
+
+.u-margin-horizontal-huge {
+  margin-left: 96px !important;
+  margin-right: 96px !important;
+}
+
+.u-margin-horizontal-none {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.u-margin-vertical {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+.u-margin-vertical-tiny {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+.u-margin-vertical-small {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.u-margin-vertical-large {
+  margin-top: 48px !important;
+  margin-bottom: 48px !important;
+}
+
+.u-margin-vertical-huge {
+  margin-top: 96px !important;
+  margin-bottom: 96px !important;
+}
+
+.u-margin-vertical-none {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+/**
+ *  Example
+ *  <button class="c-btn c-btn--primary btn-stopwatch">Start</button>
+ */
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+.c-btn {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  padding: 12px 24px;
+  transition: all 300ms ease-in-out;
+  border-radius: 3px;
+}
+
+.c-btn {
+  background-color: #7b00b1;
+  color: #000000;
+  border-color: #ccccff;
+  outline: none;
+}
+.c-btn:hover, .c-btn:focus, .c-btn:active {
+  background-color: #34004b;
+  color: #000000;
+  text-decoration: none;
+  border-color: #ccccff;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.c-btn:focus, .c-btn:active {
+  background-color: #34004b;
+  color: #000000;
+  border-color: #ccccff;
+  outline: none;
+  box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem none;
+}
+
+/* Style variants
+   ========================================================================== */
+.c-btn--primary {
+  border-radius: 6px;
+  background-color: #7b00b1;
+  color: #000000;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.c-btn--primary:hover, .c-btn--primary:focus, .c-btn--primary:active {
+  background-color: #460065;
+  color: #ffffff;
+  text-decoration: none;
+}
+.c-btn--primary:focus, .c-btn--primary:active {
+  background-color: #110018;
+  box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem #58007e;
+}
+
+.c-btn--secondary {
+  border-radius: 3px;
+  background-color: #ccccff;
+  color: #000000;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.c-btn--secondary:hover, .c-btn--secondary:focus, .c-btn--secondary:active {
+  background-color: #9999ff;
+  color: #ffffff;
+  text-decoration: none;
+}
+.c-btn--secondary:focus, .c-btn--secondary:active {
+  background-color: #6666ff;
+  box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem #9999ff;
+}
+
+.c-btn--tertiary {
+  border-radius: 3px;
+  background-color: #7777ff;
+  color: #000000;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.c-btn--tertiary:hover, .c-btn--tertiary:focus, .c-btn--tertiary:active {
+  background-color: #4444ff;
+  color: #ffffff;
+  text-decoration: none;
+}
+.c-btn--tertiary:focus, .c-btn--tertiary:active {
+  background-color: #0000dd;
+  box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem #1111ff;
+}
+
+/* Size variants
+   ========================================================================== */
+.c-btn--small {
+  padding: 6px 12px;
+}
+
+.c-btn--large {
+  padding: 24px 48px;
+}
+
+/* Ghost buttons
+   ========================================================================== */
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+.c-btn--ghost {
+  border: 2px solid currentColor;
+  padding: 10px 22px;
+}
+.c-btn--ghost, .c-btn--ghost:hover, .c-btn--ghost:active, .c-btn--ghost:focus {
+  background: none;
+}
+.c-btn--ghost.c-btn--small {
+  padding: 4px 10px;
+}
+.c-btn--ghost.c-btn--large {
+  padding: 22px 46px;
+}
+.c-btn--ghost.c-btn--primary {
+  color: #4a8ec2;
+}
+.c-btn--ghost.c-btn--primary:hover, .c-btn--ghost.c-btn--primary:focus {
+  color: #3774a2;
+}
+.c-btn--ghost.c-btn--secondary {
+  color: #2f4054;
+}
+.c-btn--ghost.c-btn--secondary:hover, .c-btn--ghost.c-btn--secondary:focus {
+  color: #1d2733;
+}
+.c-btn--ghost.c-btn--tertiary {
+  color: #fff;
+}
+.c-btn--ghost.c-btn--tertiary:hover, .c-btn--ghost.c-btn--tertiary:focus {
+  color: #fff;
+}
+
+/**
+ * Positive buttons skin. Extends `.btn`.
+ */
+.btn--positive {
+  background-color: #3f990f;
+  color: white;
+}
+
+/**
+ * Negative buttons skin. Extends `.btn`.
+ */
+.btn--negative {
+  background-color: #9f102e;
+  color: white;
+}
+
+.btn--primary,
+.btn--secondary {
+  height: 30px;
+  line-height: 1;
+  padding: initial;
+  border-radius: 20px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Form buttons
+   ========================================================================== */
+.btn-submit {
+  background-color: #3f990f;
+  color: #ffffff;
+}
+.btn-submit:hover, .btn-submit:focus, .btn-submit:active {
+  background-color: #35820d;
+}
+.btn-submit:focus, .btn-submit:active {
+  background-color: #2c6b0a;
+  box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem #3f990f;
+}
+
+.btn-cancel {
+  background-color: #666;
+  color: #ffffff;
+}
+.btn-cancel:hover, .btn-cancel:focus, .btn-cancel:active {
+  background-color: #595959;
+}
+.btn-cancel:focus, .btn-cancel:active {
+  background-color: #4d4d4d;
+  box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem #666;
+}
+
+/*
+// TOOLS
+@import "_1-tools.mixins.scss";
+@import "_1-tools.mq.scss";
+@import "_1-tools.font-size.scss";
+@import "_1-tools.clearfix.scss";
+@import "_1-tools.hidden.scss";
+@import "node_modules/sass-mq/mq.scss";
+
+
+
+
+
+// GENERIC
+@import "_2-generic.box-sizing.scss";
+@import "_2-generic.normalize.scss";
+@import "_2-generic.reset.scss";
+@import "_2-generic.shared.scss";
+
+
+
+
+// ELEMENTS
+@import "_3-elements.page.scss";
+@import "_3-elements.headings.scss";
+@import "_3-elements.images.scss";
+@import "_3-elements.tables.scss";
+
+
+
+
+// OBJECTS
+//
+// Uncomment and add to this section as necessary.
+@import "_4-objects.wrapper.scss";
+@import "_4-objects.layout.scss";
+@import "_4-objects.flag.scss";
+@import "_4-objects.media.scss";
+@import "_4-objects.list-bare.scss";
+@import "_4-objects.list-inline.scss";
+@import "_4-objects.box.scss";
+@import "_4-objects.block.scss";
+@import "_4-objects.ratio.scss";
+@import "_4-objects.crop.scss";
+@import "_4-objects.pack.scss";
+@import "_4-objects.table.scss";
+
+
+
+
+
+// UTILITIES
+@import "_6-utilities.clearfix.scss";
+
+// Be aware that enabling offsets produces a large chunk of classes which might
+// bloat your CSS, depending on the amount of breakpoints you defined.
+// Only set this to `true` if you are absolutely sure about what you are doing.
+$inuit-offsets: true;
+@import "_6-utilities.widths.scss";
+@import "_6-utilities.headings.scss";
+@import "_6-utilities.spacings.scss";
+@import "_6-utilities.responsive-spacings.scss";
+@import "_6-utilities.print.scss";
+@import "_6-utilities.hide.scss";
+
+*/
+/* ==========================================================================
+   #PAGINATON
+   ========================================================================== */
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+  /* margin: 0 auto; */
+  display: flex;
+  line-height: 1.43;
+  font-size: 14px;
+}
+
+.pagination-container li.pagination-item {
+  /* padding: 0 12px;
+  height: 32px; */
+  /* text-align: center; */
+  /* margin: auto 4px; */
+  /* box-sizing: border-box; */
+  /* border-radius: 16px; */
+  /* min-width: 32px; */
+}
+
+.pagination-container li.pagination-item {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: 0.01071em;
+}
+
+.pagination-container .pagination-item.dots:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination-container .pagination-item.selected a {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.pagination-container .pagination-item .arrow::before {
+  position: relative;
+  /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+  content: "";
+  /* By using an em scale, the arrows will size with the font */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+}
+
+.pagination-container .pagination-item .arrow.left {
+  /* transform: rotate(-135deg) translate(-50%); */
+  transform: rotate(225deg);
+}
+
+.pagination-container .pagination-item .arrow.right {
+  transform: rotate(45deg);
+}
+
+.pagination-container .pagination-item.disabled a {
+  pointer-events: none;
+}
+
+.pagination-container .pagination-item.disabled .arrow::before {
+  border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+
+.pagination-container .pagination-item.disabled a:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination-container .pagination-item .arrow {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  line-height: 1;
+  padding-top: 8px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+.pagination-container .pagination-item a {
+  display: inline-block;
+  text-align: center;
+  height: 36px;
+  width: 36px;
+  line-height: 1;
+  padding-top: 11px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+.pagination-container .pagination-item a:hover,
+.pagination-container .pagination-item .arrow:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   #TRUMPS - FRAMEWORK
+   ========================================================================== */
+.t-db {
+  display: block !important;
+}
+
+.t-mac {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.t-mt-tiny {
+  margin-top: 6px !important;
+}
+
+.t-mt-small {
+  margin-top: 12px !important;
+}
+
+.t-mt {
+  margin-top: 24px !important;
+}
+
+.t-mt-large {
+  margin-top: 48px !important;
+}
+
+.t-mt-huge {
+  margin-top: 96px !important;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/app.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0;
+        }
+
+        .ll {
+            flex: 1;
+            /* padding: 0 20%; */
+            font-size: 16px;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .ll a {
+            display: inline-block;
+            width: 15px;
+            padding: 4px 8px;
+            text-align: center;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        .ll a:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+
+
+        <div style="width: 440px; margin: 40px auto;">
+            <ul class="pagination-container pagination-bar">
+                <li class="ll">
+                    <div class="arrow left"></div>
+                </li>
+                <li class="ll"><a href="#">1</a></li>
+                <li class="ll selected"><a href="#">22</a></li>
+                <li class="ll"><a href="#">3</a></li>
+                <li class="ll"><a href="#">44</a></li>
+                <li class="ll"><a href="#">5</a></li>
+                <li class="ll dots"><a href="#">…</a></li>
+                <li class="ll"><a href="#">40</a></li>
+                <li class="ll">
+                    <div class="arrow right"></div>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width: 440px; margin: 40px auto;">
+            <ul class="pagination-container pagination-bar">
+                <li class="ll">
+                    <div class="arrow left"></div>
+                </li>
+                <li class="ll">1</li>
+                <li class="ll selected">22</li>
+                <li class="ll">3</li>
+                <li class="ll">44</li>
+                <li class="ll">5</li>
+                <li class="ll dots">…</li>
+                <li class="ll">40</li>
+                <li class="ll">
+                    <div class="arrow right"></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="index.js"></script> -->
+
+
+</html>

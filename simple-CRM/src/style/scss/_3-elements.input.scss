@@ -1,0 +1,222 @@
+/* ==========================================================================
+   #INPUT
+   ========================================================================== */
+
+/**
+ * This makes input boxes look nicer instead of the default boring design
+ * For styling, use a style variant
+ * input HTML should include placeholder, required and tabindex attributes
+ */
+
+/**
+label class - fld-label ( from _3-elements.fields.scss)
+input class - .e-input--primary, .e-input--secondary, .c-input--small, .c-input--large, .e-input--positive, .e-input--negative
+label, input group classes - fld-lbl-row, fld-lbl-column
+
+<div class="fld-lbl-row">
+    <label for="firstname" class="fld-label">First Name</label>
+    <input type="text" id="firstname" name="firstname" class="e-input--primary" placeholder="Your first name ...." value="">
+</div>
+
+<div class="fld-lbl-column">
+    <label for="email" class="fld-label">email</label>
+    <input type="text" id="email" name="email" class="e-input--primary" placeholder="Your email ...." value="">
+</div>
+**/
+
+// input primary size settings
+$fld-font-size--primary: $global-fld-font-size;
+$fld-width--primary: $global-fld-width;
+$lbl-font-size--primary: $global-lbl-font-size;
+$fld-border-radius--primary: 6;
+
+$fld-padding--primary-y: 7;
+$fld-height--primary: $fld-font-size--primary + 7 + (2 * $fld-padding--primary-y);
+
+// input secondary size settings
+$fld-font-size--secondary: $global-fld-font-size;
+$fld-width--secondary: $global-fld-width;
+$lbl-font-size--secondary: $global-lbl-font-size;
+$fld-border-radius--secondary: 6;
+
+$fld-padding--secondary-y: 7;
+$fld-height--secondary: $fld-font-size--secondary + 7 + (2 * $fld-padding--secondary-y);
+
+// Primary input colors
+$color-input-font-color--primary: $color-fld-font;
+$color-input-bg--primary: lighten($color-brand, 60%);
+$color-input-bg-empty--primary: lighten($color-brand, 60%);
+$color-input-border--primary: darken($color-brand, 10%);
+$color-input-outline--primary: $color-input-border--primary;
+
+$color-input-hover-bg--primary: #f4f4f4;
+$color-input-hover-border--primary: #f4f4f4;
+$color-input-hover-outline--primary: $color-input-hover-border--primary;
+
+$color-input-active-font-color--primary: #f4f4f4;
+$color-input-active-bg--primary: #f4f4f4;
+$color-input-active-border--primary: $color-brand;
+$color-input-active-outline--primary: $color-input-active-border--primary;
+
+// Secondary input colors
+$color-input-active-font-color--secondary: $color-fld-font;
+$color-input-bg--secondary: lighten($color-secondary, 60%);
+$color-input-bg-empty--secondary: lighten($color-secondary, 60%);
+$color-input-border--secondary: darken($color-secondary, 10%);
+$color-input-outline--secondary: $color-input-border--secondary;
+
+$color-input-hover-bg--secondary: #f4f4f4;
+$color-input-hover-border--secondary: #f4f4f4;
+$color-input-hover-outline--secondary: $color-input-hover-border--secondary;
+
+$color-input-active-font-color--secondary: #f4f4f4;
+$color-input-active-bg--secondary: #f4f4f4;
+$color-input-active-border--secondary: $color-secondary;
+$color-input-active-outline--secondary: $color-input-active-border--secondary;
+
+// if you want to override the default hover and focus of the browsers
+// which are inconsistent among browsers, use the hover, focus and active
+// code within the primary and secondary classes
+// Do something like class="c-btn btn--primary"
+
+/* Style variants
+   ========================================================================== */
+// put class 'e-num' in and add javscript file in to add up/down arrow features
+.e-input--primary {
+	// height: $fld-height--primary + 0px;
+	height: 2rem;
+	padding: 0.25em 0.5em;
+	font-size: $fld-font-size--primary + 0px;
+	font-family: "Source Sans Pro", sans-serif;
+	// color: $color-input-font-color--primary;
+	background-color: $color-input-bg--primary;
+	border: 2px solid $color-input-border--primary;
+	border-radius: $fld-border-radius--primary + 0px;
+	// outline: 2px solid $color-input-outline--primary;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $color-input-hover-bg--primary;
+		// border: 2px solid $color-input-hover-border--primary;
+		// outline: 2px solid $color-input-hover-outline--primary;
+		// transition: background-color 0.2s linear, color 0.2s linear;
+		transition: background-color 0.2s linear, color 0.2s linear;
+	}
+
+	&:focus,
+	&:active {
+		// color: $color-input-color-active--primary;
+		background-color: $color-input-active-bg--primary;
+		border: 2px solid $color-input-active-border--primary;
+		// box-shadow: 0 0 0 0.125rem white, 0 0 0 0.325rem $color-input-active-outline--primary;
+		box-shadow: 0 0 0 0.15rem $color-input-active-outline--primary;
+		// on focus keeps this border on the button after the click
+		outline: none; // firefox puts a dashed outline on text
+		// outline: 3px dotted $color-input-active-outline--primary;
+		transition: background-color 0.2s linear, color 0.2s linear;
+	}
+
+	&:placeholder-shown {
+		background-color: $color-input-bg-empty--primary;
+	}
+}
+
+.e-input--secondary {
+	// height: $fld-height--secondary + 0px;
+	height: 2rem;
+	padding: 0.25em 0.5em;
+	font-size: $fld-font-size--secondary + 0px;
+	font-family: "Source Sans Pro", sans-serif;
+	// color: $color-input-font-color--secondary;
+	background-color: $color-input-bg--secondary;
+	border: 2px solid $color-input-border--secondary;
+	border-radius: $fld-border-radius--secondary + 0px;
+	// outline: 2px solid $color-input-outline--secondary;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $color-input-hover-bg--secondary;
+		// border: 2px solid $color-input-hover-border--secondary;
+		outline: 2px solid $color-input-hover-outline--secondary;
+		// transition: background-color 0.2s linear, color 0.2s linear;
+		transition: background-color 0.2s linear, color 0.2s linear;
+	}
+
+	&:focus,
+	&:active {
+		// color: $color-input-color-active--primary;
+		background-color: $color-input-active-bg--secondary;
+		border: 2px solid $color-input-active-border--secondary;
+		// box-shadow: 0 0 0 0.125rem white, 0 0 0 0.325rem $color-input-active-outline--secondary;
+		box-shadow: 0 0 0 0.15rem $color-input-active-outline--secondary;
+		// on focus keeps this border on the button after the click
+		outline: none; // firefox puts a dashed outline on text
+		// outline: 3px dotted $color-input-active-outline--secondary;
+		transition: background-color 0.2s linear, color 0.2s linear;
+	}
+
+	&:placeholder-shown {
+		background-color: $color-input-bg-empty--secondary;
+	}
+}
+
+/* Size variants
+   ========================================================================== */
+
+.c-input--small {
+	padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
+}
+
+.c-input--large {
+	padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+}
+
+/**
+ * Positive buttons skin. Extends `.btn`.
+ */
+.e-input--positive {
+	background-color: green;
+	color: white;
+}
+
+/**
+ * Negative buttons skin. Extends `.btn`.
+ */
+.e-input--negative {
+	background-color: red;
+	color: white;
+}
+
+/* Label and field layout
+   ========================================================================== */
+
+$fld-lbl-row-width: 150;
+$fld-lbl-row-margin-top: 10;
+
+.fld-lbl-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: $fld-lbl-row-margin-top + 0px;
+
+	label {
+		width: $fld-lbl-row-width + 0px;
+	}
+}
+
+$fld-lbl-column-margin-top: 10;
+
+.fld-lbl-column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: $fld-lbl-column-margin-top + 0px;
+
+	label,
+	input {
+		text-align: left;
+		margin: 0;
+	}
+}
