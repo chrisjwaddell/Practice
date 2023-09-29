@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client"
 import Pagination from "./Pagination"
 import Home from "./pages/Home"
 import AddEdit from "./pages/AddEdit"
-// import BookList from "./pages/BookList"
+import View from "./pages/View"
 
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
@@ -44,6 +44,8 @@ const App = () => {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/addContact" element={<AddEdit />} />
+					<Route path="/update/:id" element={<AddEdit />} />
+					<Route path="/view/:id" element={<View />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

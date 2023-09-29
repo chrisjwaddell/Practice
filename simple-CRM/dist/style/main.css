@@ -1000,9 +1000,10 @@ label, input group classes - fld-lbl-row, fld-lbl-column
 /* Style variants
    ========================================================================== */
 .e-input--primary {
+  width: 500px;
   height: 2rem;
   padding: 0.25em 0.5em;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
   background-color: #f7e4ff;
   border: 2px solid #58007e;
@@ -1024,9 +1025,10 @@ label, input group classes - fld-lbl-row, fld-lbl-column
 }
 
 .e-input--secondary {
+  width: 500px;
   height: 2rem;
   padding: 0.25em 0.5em;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
   background-color: white;
   border: 2px solid #9999ff;
@@ -1105,6 +1107,10 @@ label, input group classes - fld-lbl-row, fld-lbl-column
  * CSS framework code that's handy
  *
  */
+.tc {
+  text-align: center;
+}
+
 .mac {
   margin-left: auto;
   margin-right: auto;

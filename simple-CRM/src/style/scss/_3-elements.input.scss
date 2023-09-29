@@ -25,7 +25,8 @@ label, input group classes - fld-lbl-row, fld-lbl-column
 **/
 
 // input primary size settings
-$fld-font-size--primary: $global-fld-font-size;
+// $fld-font-size--primary: $global-fld-font-size;
+$fld-font-size--primary: 16;
 $fld-width--primary: $global-fld-width;
 $lbl-font-size--primary: $global-lbl-font-size;
 $fld-border-radius--primary: 6;
@@ -34,7 +35,8 @@ $fld-padding--primary-y: 7;
 $fld-height--primary: $fld-font-size--primary + 7 + (2 * $fld-padding--primary-y);
 
 // input secondary size settings
-$fld-font-size--secondary: $global-fld-font-size;
+// $fld-font-size--secondary: $global-fld-font-size;
+$fld-font-size--secondary: 16;
 $fld-width--secondary: $global-fld-width;
 $lbl-font-size--secondary: $global-lbl-font-size;
 $fld-border-radius--secondary: 6;
@@ -83,6 +85,7 @@ $color-input-active-outline--secondary: $color-input-active-border--secondary;
    ========================================================================== */
 // put class 'e-num' in and add javscript file in to add up/down arrow features
 .e-input--primary {
+	width: 500px;
 	// height: $fld-height--primary + 0px;
 	height: 2rem;
 	padding: 0.25em 0.5em;
@@ -123,6 +126,7 @@ $color-input-active-outline--secondary: $color-input-active-border--secondary;
 }
 
 .e-input--secondary {
+	width: 500px;
 	// height: $fld-height--secondary + 0px;
 	height: 2rem;
 	padding: 0.25em 0.5em;

@@ -73,12 +73,64 @@ app.delete("/api/remove/:id", async (req, res) => {
 })
 
 app.get("/api/getusers", async (req, res) => {
-	console.log("hit /getusers")
 	const [rows] = await pool.query("SELECT * FROM people")
 	// console.log(rows)
 	res.json(rows)
 })
 
-// getUsers()
+app.put("/api/update/:id", async (req, res) => {
+	console.log("hit /update")
+	const { id } = req.params
+	const { firstname, lastname, email, mobile } = req.body
+
+	const [rows] = await pool
+		.query(
+			"UPDATE people SET firstName = ?, lastName = ?, email = ?, mobileNumber = ? WHERE person_id=?",
+			[firstname, lastname, email, mobile, id],
+			(err, result) => {
+				console.log("in callback")
+				if (error) {
+					console.log("error")
+					console.log(err)
+					res.json({ message: "error" })
+				} else {
+					res.json({ message: "success" })
+				}
+			}
+		)
+		// .then((resp) => {
+		// 	console.log("then")
+		// 	res.json({ message: resp })
+		// })
+		.catch((err) => res.json({ message: err }))
+	// console.log(rows)
+	res.json(rows)
+})
+
+app.get("/api/getuser/:id", async (req, res) => {
+	console.log("hit /getuser")
+	const { id } = req.params
+	console.log("id - " + id)
+	const [rows] = await pool.query(
+		"SELECT * FROM people WHERE person_id=?",
+		[id],
+		(err, result) => {
+			console.log("in callback")
+			if (error) {
+				console.log("error")
+				console.log(err)
+				res.json({ message: "error" })
+			} else {
+				res.json({ message: "success" })
+			}
+		}
+	)
+	// .then((resp) => {
+	// 	console.log("then")
+	// 	res.json(resp)
+	// })
+	// console.log(rows)
+	res.json(rows)
+})
 
 app.listen(25055, () => console.log("Server listening on 25055"))

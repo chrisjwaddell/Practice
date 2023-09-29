@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useNavigate, useParam, Link } from "react-router-dom"
+import { useNavigate, useParams, Link } from "react-router-dom"
 import { toast } from "react-toastify"
 // import "react-toastify/dist/ReactToastify.css"
 
@@ -16,30 +16,75 @@ export default function AddEdit() {
 
 	const navigate = useNavigate()
 
+	const { id } = useParams()
+
+	useEffect(() => {
+		fetch(`http://localhost:25055/api/getuser/${id}`, {
+			method: "GET",
+		})
+			.then((resp) => resp.json())
+			.then((u) => {
+				setState({
+					firstname: u[0].firstName,
+					lastname: u[0].lastName,
+					email: u[0].email,
+					mobile: u[0].mobileNumber,
+				})
+			})
+			// .then((users) => console.log(users))
+			.catch((err) => console.error(err))
+	}, [id])
+
 	const handleSubmit = (e) => {
 		e.preventDefault()
 
 		console.log(JSON.stringify({ firstname, lastname, email, mobile }))
 
-		if (!firstname || !lastname || !email || !mobile) {
-			toast.error("Please fill in all the fields")
+		if (!id) {
+			// Add contact
+			if (!firstname || !lastname || !email || !mobile) {
+				toast.error("Please fill in all the fields")
+			} else {
+				fetch("http://localhost:25055/api/add", {
+					method: "POST",
+					headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ firstname, lastname, email, mobile }),
+				})
+					.then(setState(initialState))
+					// .then((users) => console.log(users))
+					.catch((err) => console.error(err))
+				// .catch((err) => console.error(err.response.data?????))
+				toast.success("Contact Added successfully")
+				setTimeout(() => {
+					navigate("/")
+				}, 500)
+			}
 		} else {
-			fetch("http://localhost:25055/api/add", {
-				method: "POST",
-				headers: {
-					Accept: "application/json",
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({ firstname, lastname, email, mobile }),
-			})
-				.then(setState(initialState))
-				// .then((users) => console.log(users))
-				.catch((err) => console.error(err))
-			// .catch((err) => console.error(err.response.data?????))
-			toast.success("Contact Added successfully")
-			setTimeout(() => {
-				navigate("/")
-			}, 500)
+			// Update
+
+			if (!firstname || !lastname || !email || !mobile) {
+				toast.error("Please fill in all the fields")
+			} else {
+				fetch(`http://localhost:25055/api/update/${id}`, {
+					method: "PUT",
+					headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ firstname, lastname, email, mobile }),
+				})
+					// .then(setState(initialState))
+					// .then((users) => console.log(users))
+					.catch((err) => console.error(err))
+				// .catch((err) => console.error(err.response.data?????))
+				toast.success("Contact Updated successfully")
+				setTimeout(() => {
+					navigate("/")
+				}, 500)
+			}
 		}
 	}
 
@@ -61,7 +106,7 @@ export default function AddEdit() {
 						name="firstname"
 						className="e-input--primary"
 						placeholder="Your first name ...."
-						value={firstname}
+						value={firstname || ""}
 						onChange={handleInputChange}
 					/>
 				</div>
@@ -75,7 +120,7 @@ export default function AddEdit() {
 						name="lastname"
 						className="e-input--primary"
 						placeholder="Your Last name ...."
-						value={lastname}
+						value={lastname || ""}
 						onChange={handleInputChange}
 					/>
 				</div>
@@ -89,7 +134,7 @@ export default function AddEdit() {
 						name="email"
 						className="e-input--primary"
 						placeholder="Your email ...."
-						value={email}
+						value={email || ""}
 						onChange={handleInputChange}
 					/>
 				</div>
@@ -103,14 +148,14 @@ export default function AddEdit() {
 						name="mobile"
 						className="e-input--primary"
 						placeholder="Your mobile ...."
-						value={mobile}
+						value={mobile || ""}
 						onChange={handleInputChange}
 					/>
 				</div>
 
 				<input
 					type="submit"
-					value="save"
+					value={id ? "Update" : "Save"}
 					className="t-db c-btn c-btn--primary t-mac t-mt btn-submit"
 				/>
 				<Link to="/">

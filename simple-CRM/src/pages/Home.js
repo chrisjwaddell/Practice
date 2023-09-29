@@ -64,27 +64,7 @@ export default function Home() {
 		}
 	}
 
-	function handleUpdate(id) {
-		fetch(`http://localhost:25055/api/remove/${id}`, {
-			method: "DELETE",
-		})
-			// .then((resp) => resp.json())
-			.then(() => {
-				console.log("Successfully deleted")
-				toast.success("Contact deleted successfully")
-				setTimeout(async () => {
-					let r = await displayusers()
-					// .then((result) => console.log(result))
-					console.log(r)
-					setUsers(r)
-					console.log("after setUsers")
-
-					navigate("/")
-				}, 500)
-			})
-			// .then((users) => console.log(users))
-			.catch((err) => console.error(err))
-	}
+	function handleUpdate(id) {}
 
 	return (
 		<div>
@@ -129,7 +109,7 @@ export default function Home() {
 									Delete
 								</button>
 								<Link to={`/view/${u.person_id}`}>
-									<button className="c-btn btn">View</button>
+									<button className="c-btn btn bg-white">View</button>
 								</Link>
 							</td>
 						</tr>

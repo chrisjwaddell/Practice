@@ -7,7 +7,7 @@
     $global-- are globals set in .global.scss
 */
 
-$brand-color: #7b00b1; // I had to put this here to stop an error on compiling, try to fix this
+$brand-color: #dddddd; // I had to put this here to stop an error on compiling, try to fix this
 
 $color-brand: $brand-color;
 $color-pink: $color-brand;
@@ -174,8 +174,8 @@ $inuit-base-text-color: $color-gray;
 // Text
 // Headings
 // $color-headings: $color-pink;
-$color-headings: #000000;
 $color-heading-sub: $color-gray;
+$color-headings: #000000;
 
 // Links
 $color-link: #3980f2;

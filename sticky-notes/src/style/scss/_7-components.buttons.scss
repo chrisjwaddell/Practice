@@ -1,0 +1,350 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ *  Example
+ *  <button class="c-btn c-btn--primary btn-stopwatch">Start</button>
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+//
+// Primary button settings
+$color-btn-bg-primary: $color-brand;
+$color-btn-color-primary: #000000;
+$color-btn-border-primary: $color-btn-bg-primary;
+$color-btn-outline-primary: $color-btn-border-primary;
+// $btn-border-radius-primary: $global-btn-border-radius;
+$btn-border-radius-primary: 25px;
+
+$color-btn-hover-bg-primary: darken($color-btn-bg-primary, 5%);
+$color-btn-hover-color-primary: #ffffff;
+$color-btn-hover-border-primary: $color-btn-hover-bg-primary;
+// $color-btn-outline-primary: 1px solid $color-brand;
+$color-btn-hover-outline-primary: $color-btn-hover-bg-primary;
+
+$color-btn-focus-bg-primary: darken($color-btn-bg-primary, 10%);
+$color-btn-focus-color-primary: #000000;
+$color-btn-focus-border-primary: $color-secondary;
+// $color-btn-outline-primary: 1px solid $color-secondary;
+$color-btn-focus-outline-primary: $color-btn-focus-bg-primary;
+
+//
+// Secondary button settings
+$color-btn-bg-secondary: $color-secondary;
+$color-btn-color-secondary: #000000;
+$color-btn-border-secondary: $color-btn-bg-secondary;
+$color-btn-outline-secondary: $color-btn-border-secondary;
+$btn-border-radius-secondary: $global-btn-border-radius;
+
+$color-btn-hover-bg-secondary: darken($color-btn-bg-secondary, 5%);
+$color-btn-hover-color-secondary: #ffffff;
+$color-btn-hover-border-secondary: $color-btn-hover-bg-secondary;
+// $color-btn-outline-secondary: 1px solid $color-secondary;
+$color-btn-hover-outline-secondary: $color-btn-hover-bg-secondary;
+
+$color-btn-focus-bg-secondary: darken($color-btn-bg-secondary, 10%);
+$color-btn-focus-color-secondary: #000000;
+$color-btn-focus-border-secondary: $color-primary;
+// $color-btn-outline-secondary: 1px solid $color-brand;
+$color-btn-focus-outline-secondary: $color-btn-focus-bg-secondary;
+
+//
+// Tertiary button settings
+$color-btn-bg-tertiary: $color-tertiary;
+$color-btn-color-tertiary: #000000;
+$color-btn-border-tertiary: $color-btn-bg-tertiary;
+$color-btn-outline-tertiary: $color-btn-border-tertiary;
+$btn-border-radius-tertiary: $global-btn-border-radius;
+
+$color-btn-hover-bg-tertiary: darken($color-btn-bg-tertiary, 5%);
+$color-btn-hover-color-tertiary: #ffffff;
+$color-btn-hover-border-tertiary: $color-btn-hover-bg-tertiary;
+// $color-btn-outline-tertiary: 1px solid $color-tertiary;
+$color-btn-hover-outline-tertiary: $color-btn-hover-bg-tertiary;
+
+$color-btn-focus-bg-tertiary: darken($color-btn-bg-tertiary, 20%);
+$color-btn-focus-color-tertiary: #000000;
+$color-btn-focus-border-tertiary: $color-secondary;
+// $color-btn-outline-tertiary: 1px solid $color-secondary;
+$color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
+
+.c-btn {
+	display: inline-block;
+	vertical-align: middle;
+	font: inherit;
+	text-align: center;
+	margin: 0;
+	cursor: pointer;
+	padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+	transition: $global-transition;
+	border-radius: $global-btn-border-radius;
+}
+
+.c-btn {
+	background-color: $color-btn-bg;
+	color: $color-btn-color;
+	border-color: $color-btn-border;
+	outline: none; // firefox puts a dashed outline on text
+	// outline: 1px solid $color-btn-outline;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $color-btn-hover-bg;
+		color: $color-btn-hover-color;
+		text-decoration: none;
+		border-color: $color-btn-hover-border;
+		// outline: 1px solid $color-btn-hover-outline;
+		transition: background-color 0.2s linear, color 0.2s linear;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $color-btn-focus-bg;
+		// color: color-btn-focus;
+		color: $color-btn-focus-color;
+		border-color: $color-btn-focus-border;
+		// outline: 3px dotted $color-btn-focus-outline;
+		outline: none; // firefox puts a dashed outline on text
+		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline; // on focus keeps this border on the button after the click
+	}
+}
+
+// if you want to override the default hover and focus of the browsers
+// which are inconsistent among browsers, use the hover, focus and active
+// code within the primary and secondary classes
+// Do something like class="c-btn btn--primary"
+// Button and anchor work a similar way, there is primary and secondary
+// hover, focus and active have specific code that can be changed
+// Customize as needed
+// see the following links for more information:
+// https://zellwk.com/blog/design-focus-style/
+// https://zellwk.com/blog/style-hover-focus-active-states/
+// https://zellwk.com/blog/creating-focus-style/
+// https://codepen.io/zellwk/pen/KKPvbag
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--primary {
+	border-radius: $btn-border-radius-primary;
+	background-color: $color-btn-bg-primary;
+	color: $color-btn-color-primary;
+	// border-width: 1px;
+	// border-style: solid;
+	// border-color: $color-btn-border-primary;
+	// outline: 1px solid $color-btn-outline-primary;
+	transition: background-color 0.2s linear, color 0.2s linear;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($color-btn-hover-bg-primary, 10%);
+		color: $color-btn-hover-color-primary;
+		text-decoration: none;
+		// border-color: $color-btn-hover-border-primary;
+		// outline: 1px solid $color-btn-hover-outline-primary;
+	}
+	&:focus,
+	&:active {
+		background-color: darken($color-btn-focus-bg-primary, 20%);
+		// color: $color-btn-focus-color-primary;
+		// border-color: $color-btn-focus-border-primary;
+		// outline: 3px dotted $color-btn-focus-outline-primary;
+		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline-primary; // on focus keeps this border on the button after the click
+	}
+}
+
+.c-btn--secondary {
+	border-radius: $btn-border-radius-secondary;
+	background-color: $color-btn-bg-secondary;
+	color: $color-btn-color-secondary;
+	// border-width: 1px;
+	// border-style: solid;
+	// border-color: $color-btn-border-secondary;
+	// outline: 1px solid $color-btn-outline-secondary;
+	transition: background-color 0.2s linear, color 0.2s linear;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($color-btn-hover-bg-secondary, 5%);
+		color: $color-btn-hover-color-secondary;
+		text-decoration: none;
+		// border-color: $color-btn-hover-border-secondary;
+		// outline: 1px solid $color-btn-hover-outline-secondary;
+	}
+	&:focus,
+	&:active {
+		background-color: darken($color-btn-focus-bg-secondary, 10%);
+		// color: $color-btn-focus-color-secondary;
+		// border-color: $color-btn-focus-border-secondary;
+		// outline: 3px dotted $color-btn-focus-outline-secondary;
+		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline-secondary; // on focus keeps this border on the button after the click
+	}
+}
+
+.c-btn--tertiary {
+	border-radius: $btn-border-radius-tertiary;
+	background-color: $color-btn-bg-tertiary;
+	color: $color-btn-color-tertiary;
+	// border-width: 1px;
+	// border-style: solid;
+	// border-color: $color-btn-border-tertiary;
+	// outline: 1px solid $color-btn-outline-tertiary;
+	transition: background-color 0.2s linear, color 0.2s linear;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($color-btn-hover-bg-tertiary, 5%);
+		color: $color-btn-hover-color-tertiary;
+		text-decoration: none;
+		// border-color: $color-btn-hover-border-tertiary;
+		// outline: 1px solid $color-btn-hover-outline-tertiary;
+	}
+	&:focus,
+	&:active {
+		background-color: darken($color-btn-focus-bg-tertiary, 10%);
+		// color: $color-btn-focus-color-tertiary;
+		// border-color: $color-btn-focus-border-tertiary;
+		// outline: 3px dotted $color-btn-focus-outline-tertiary;
+		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline-tertiary; // on focus keeps this border on the button after the click
+	}
+}
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+	padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
+}
+
+.c-btn--large {
+	padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+}
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+$btn-ghost-border-width: 2px;
+.c-btn--ghost {
+	border: $btn-ghost-border-width solid currentColor;
+	padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width)
+		($inuit-global-spacing-unit - $btn-ghost-border-width);
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		background: none;
+	}
+	&.c-btn--small {
+		padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width)
+			($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+	}
+	&.c-btn--large {
+		padding: ($inuit-global-spacing-unit - $btn-ghost-border-width)
+			($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+	}
+	&.c-btn--primary {
+		color: #4a8ec2;
+		&:hover,
+		&:focus {
+			color: #3774a2;
+		}
+	}
+	&.c-btn--secondary {
+		color: #2f4054;
+		&:hover,
+		&:focus {
+			color: #1d2733;
+		}
+	}
+	&.c-btn--tertiary {
+		color: #fff;
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
+}
+
+/**
+ * Positive buttons skin. Extends `.btn`.
+ */
+
+.btn--positive {
+	background-color: $color-positive;
+	color: white;
+}
+
+/**
+ * Negative buttons skin. Extends `.btn`.
+ */
+
+.btn--negative {
+	background-color: $color-negative;
+	color: white;
+}
+
+.btn--primary,
+.btn--secondary {
+	height: 30px;
+	line-height: 1;
+	padding: initial;
+	border-radius: 20px;
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Form buttons
+   ========================================================================== */
+
+.btn-submit {
+	background-color: $color-positive;
+	color: #ffffff;
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($color-positive, 5%);
+	}
+	&:focus,
+	&:active {
+		background-color: darken($color-positive, 10%);
+		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-positive;
+	}
+}
+
+.btn-cancel {
+	background-color: $color-gray-mid;
+	color: #ffffff;
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($color-gray-mid, 5%);
+	}
+	&:focus,
+	&:active {
+		background-color: darken($color-gray-mid, 10%);
+		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-gray-mid;
+	}
+}

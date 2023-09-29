@@ -1,0 +1,135 @@
+/* ==========================================================================
+   #MAIN
+   ========================================================================== */
+
+// SETTINGS
+@import "_0-settings.config.scss";
+@import "_0-settings.core.scss";
+@import "_0-settings.global.scss";
+@import "_0-settings.colors.scss";
+
+// TOOLS
+@import "_1-tools.mixins.scss";
+@import "_1-tools.font-size.scss";
+// @import "_1-tools.hidden.scss";
+
+// GENERIC
+@import "_2-generic.box-sizing.scss";
+@import "_2-generic.normalize.scss";
+@import "_2-generic.reset.scss";
+@import "_2-generic.typography.scss";
+// @import "_2-generic.shared.scss";
+
+// ELEMENTS
+@import "_3-elements.headings.scss";
+@import "_3-elements.links.scss";
+@import "_3-elements.fields.scss";
+@import "_3-elements.input.scss";
+// @import "_3-elements.images.scss";
+@import "_3-elements.framework.scss";
+// @import "_3-elements.code.scss";
+
+// OBJECTS
+@import "_4-objects.container.scss";
+// @import "_4-objects.wrapper.scss";
+// @import "_4-objects.container-fluid.scss";
+@import "_4-objects.layout.scss";
+// @import "_4-objects.sections.scss";
+// @import "_4-objects.id-section.scss";
+// @import "_4-objects.list-bare.scss";
+// @import "_4-objects.list-inline.scss";
+
+// UTILITIES
+@import "_6-utilities.spacings.scss";
+
+//COMPONENTS
+// Don't use scroll bar
+@import "_7-components.buttons.scss";
+// @import "_7-components.page-head.scss";
+// @import "_7-components.page-foot.scss";
+// @import "_7-components.site-nav-my-website.scss";
+// @import "_7-components.nav-sub-icon.scss";
+// @import "_7-components.modal.scss";
+// @import "_7-components.modal-user.scss";
+// @import "_7-components.card.scss";
+// @import "_7-components.image-text.scss";
+
+// Take this out later if not used
+// @import "_7-components-card.scss";
+
+//TRUMPS
+// @import "_8-trumps.typography.scss";
+
+/*
+// TOOLS
+@import "_1-tools.mixins.scss";
+@import "_1-tools.mq.scss";
+@import "_1-tools.font-size.scss";
+@import "_1-tools.clearfix.scss";
+@import "_1-tools.hidden.scss";
+@import "node_modules/sass-mq/mq.scss";
+
+
+
+
+
+// GENERIC
+@import "_2-generic.box-sizing.scss";
+@import "_2-generic.normalize.scss";
+@import "_2-generic.reset.scss";
+@import "_2-generic.shared.scss";
+
+
+
+
+// ELEMENTS
+@import "_3-elements.page.scss";
+@import "_3-elements.headings.scss";
+@import "_3-elements.images.scss";
+@import "_3-elements.tables.scss";
+
+
+
+
+// OBJECTS
+//
+// Uncomment and add to this section as necessary.
+@import "_4-objects.wrapper.scss";
+@import "_4-objects.layout.scss";
+@import "_4-objects.flag.scss";
+@import "_4-objects.media.scss";
+@import "_4-objects.list-bare.scss";
+@import "_4-objects.list-inline.scss";
+@import "_4-objects.box.scss";
+@import "_4-objects.block.scss";
+@import "_4-objects.ratio.scss";
+@import "_4-objects.crop.scss";
+@import "_4-objects.pack.scss";
+@import "_4-objects.table.scss";
+
+
+
+
+
+// UTILITIES
+@import "_6-utilities.clearfix.scss";
+
+// Be aware that enabling offsets produces a large chunk of classes which might
+// bloat your CSS, depending on the amount of breakpoints you defined.
+// Only set this to `true` if you are absolutely sure about what you are doing.
+$inuit-offsets: true;
+@import "_6-utilities.widths.scss";
+@import "_6-utilities.headings.scss";
+@import "_6-utilities.spacings.scss";
+@import "_6-utilities.responsive-spacings.scss";
+@import "_6-utilities.print.scss";
+@import "_6-utilities.hide.scss";
+
+*/
+
+// COMPONENTS
+
+// Build and include your project’s UI components here.
+// @import "_7-components.buttons.scss";
+// @import "_7-components.strip.scss";
+// @import "_7-components.modal.scss";
