@@ -1,0 +1,97 @@
+//* ========================================================================
+//   #MASTHEAD
+//   ======================================================================== */
+
+/**
+* A Masthead is the top section below the menu and nav bar
+*  masthead height for deskotp is default 600px
+*  responsive code breakpoints change that
+*  to get the full screen tv screen effect on webpage load, javascript can change it to your screen size
+*/
+
+/*
+*  The box model scales down so it works with width much better than height.
+*  Media statements work with width, not height. When you have no javascript, you can get the width, if you want to know the screen height, you can only guess that as a fallback. Javascript kicks in to get screen size for mastheads you want to take the full screen
+*  Mobile - 350 x 660
+*  Tablet - 700 x 550
+*  laptop - 1000 x 600
+*  Desktop - 1400 x 800
+*  These are roughly good breakpoints to use.
+*/
+
+/* $site-nav-height is set in _7-components.page-head.scss
+*   default height is for a desktop, responsive code below can change that
+*/
+$masthead-height: 80px;
+$masthead-container-padding-x: 15px;
+$masthead-container-padding-y: 10px;
+$masthead-color: #ffffff;
+
+/* From _7-components.page-head.scss */
+$site-nav-height: 80px;
+
+.masthead {
+	width: 100%;
+	// height: calc(#{$masthead-height} - #{$site-nav-height});
+	height: $masthead-height;
+	z-index: 500;
+	overflow: hidden;
+	background-color: $masthead-color;
+}
+
+.masthead .container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: $masthead-container-padding-x $masthead-container-padding-y;
+}
+
+/*
+*   page-head--fixed makes the page head fixed
+*   also use .masthead--top at the top of the masthead to put a margin on the masthead
+*/
+.masthead--top {
+	margin-top: $site-nav-height !important;
+	transition: margin-top;
+}
+
+.not-index {
+	height: 275px;
+}
+
+.masthead--not-index {
+	margin: 30px auto 15px;
+}
+
+// vh is widely supported so I don't need this code really
+// I put it at the top just incase it isn't supported
+@media screen and (min-width: 1800px) {
+	.masthead {
+		height: $masthead-height;
+	}
+}
+
+@media screen and (max-width: 1799px) {
+	.masthead {
+		height: $masthead-height;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.masthead {
+		height: $masthead-height;
+	}
+}
+
+@media screen and (max-width: 899px) {
+	.masthead {
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.masthead {
+		height: 100px;
+	}
+}
