@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 
 export default function Header({ categoryList, onFilter }) {
 	useEffect(() => {
+		console.log("Header - categoryList")
 		console.log(categoryList)
 	}, [])
 
@@ -13,9 +14,15 @@ export default function Header({ categoryList, onFilter }) {
 						<label className="fld-label" style={{ marginRight: "5px" }}>
 							Category
 						</label>
-						<select id="category" onChange={(e) => onFilter(e.target.value)}>
+						<select id="category">
 							{categoryList.map((cat, idx) => (
-								<option key={idx}>{cat}</option>
+								<option
+									key={cat.id}
+									id={cat.id}
+									onClick={(e) => onFilter(e.target.id)}
+								>
+									{cat.name}
+								</option>
 							))}
 						</select>
 					</div>
