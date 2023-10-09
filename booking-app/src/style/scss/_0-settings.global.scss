@@ -1,0 +1,80 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+/*
+    $color-  are global color variables
+    $global-- are globals set in .global.scss
+*/
+
+$brand-round: 3px;
+$base-round: $brand-round;
+
+//$header-height: 100px
+$footer-border-width: 6px;
+$footer-max-height: 550px;
+
+$system-fonts: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+	"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+$container-gutter: 30px;
+
+// Bezier curves - they can be like a sort of trademark
+// $bezier-main
+
+// Standardise some UI treatments.
+
+$global-radius: 3px !default;
+$global-transition: all 300ms ease-in-out !default;
+
+/* put global CSS variables here */
+
+// button
+$global-btn-border-radius: $global-radius;
+
+// input and label
+$global-fld-font-size: 18;
+$global-fld-width: 275;
+$global-lbl-font-size: 16;
+
+$field-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04), 2px 2px 2px rgba(0, 0, 0, 0.04),
+	4px 4px 4px rgba(0, 0, 0, 0.04);
+
+// field colors set in fields.scss
+
+// :root {
+// --color-brand:       $brand-color;
+// --color-secondary: blue;
+/* l-colour or brand-colour */
+/* .<l-colour> { color: var(--<l-colour>); }
+.bg-<l-colour> { background-color: var(--<l-colour>); }
+.b-<l-colour> { border-color: var(--<l-colour>); }
+.hover-<l-colour>:hover { color: var(--<l-colour>); }
+.hover-bg-<l-colour>:hover { background-color: var(--<l-colour>); }
+.hover-b-<l-colour>:hover { border-color: var(--<l-colour>); } */
+
+// --menu-item-left-home: -4;
+// --menu-item-left-articles: 76;
+// --menu-item-left-about: 168;
+// --menu-item-left-tools: 282;
+// --menu-item-left-games: 344;
+
+// --menu-list-clone-left-home: 0;
+// --menu-list-clone-left-articles: -76;
+// --menu-list-clone-left-about: -167;
+// --menu-list-clone-left-tools: -281;
+// --menu-list-clone-left-games: -348;
+
+// --menu-item-width-home: 80;
+// --menu-item-width-articles: 90;
+// --menu-item-width-about: 110;
+// --menu-item-width-tools: 66;
+// --menu-item-width-games: 85;
+
+// --menu-marker-left: var(--menu-item-left-home);
+// --marker-width: var(--menu-item-width-home);
+// --menu-list-clone-left: var(--menu-list-clone-left-home);
+// }

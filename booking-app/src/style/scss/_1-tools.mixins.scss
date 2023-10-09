@@ -1,0 +1,104 @@
+/* ==========================================================================
+   #MIXINS
+   ========================================================================== */
+
+// I did this myself because the inuit-font-size mixin was giving me an error 1/2020
+@mixin font-size($font-size) {
+	font-size: $font-size !important;
+}
+
+// Spit out vendor prefixes in one go. Very pragmatic, far from perfect.
+@mixin vendor($property, $value...) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	#{$property}: $value;
+}
+
+// Apply ‘attention’ styles in one go.
+@mixin attention($self: false) {
+	@if ($self != false) {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	} @else {
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+}
+
+// Generate Helvetica Neue’s numbered font-weights from their aliases.
+@mixin font-weight($font-weight) {
+	@if ($font-weight == "regular") {
+		font-weight: 300;
+	}
+
+	@if ($font-weight == "bold") {
+		font-weight: 600;
+	}
+}
+
+// Create all specified heading styles in one go.
+@mixin headings($from: 1, $to: 6) {
+	%base-heading {
+		@content;
+	}
+
+	@if $from >= 1 and $to <= 6 {
+		@for $i from $from through $to {
+			h#{$i} {
+				@extend %base-heading;
+			}
+		}
+	}
+}
+
+// Clearfix mixin for use later in the project
+// ===========================================
+@mixin clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>, important);
+// }
+
+@mixin truncate($limit: 100%, $important: false) {
+	@if ($important == "important") {
+		$important: unquote("!important");
+	} @else {
+		$important: null;
+	}
+
+	max-width: $limit $important;
+	white-space: nowrap $important;
+	overflow: hidden $important;
+	text-overflow: ellipsis $important;
+}
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin box-shadow($params) {
+	-webkit-box-shadow: $params;
+	-moz-box-shadow: $params;
+	box-shadow: $params;
+}

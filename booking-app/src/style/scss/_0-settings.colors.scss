@@ -1,0 +1,263 @@
+///* ========================================================================
+//   #COLORS
+//   ======================================================================== */
+
+/*
+    $color-  are global color variables
+    $global-- are globals set in .global.scss
+*/
+
+$brand-color: #7b00b1; // I had to put this here to stop an error on compiling, try to fix this
+
+$color-brand: $brand-color;
+$color-pink: $color-brand;
+$color-gray: #333;
+$color-gray-light: #eaeaea;
+$color-gray-light2: #999;
+$color-gray-mid: #666;
+$color-gray-ui: #ddd;
+$color-green: #15aa00;
+$color-purple: #7b00b1;
+$color-highlight: #fff;
+$color-tint: #f2f2f2;
+$color-positive: #3f990f;
+$color-positive2: rgb(0, 255, 0);
+$color-negative: #9f102e;
+$color-negative2: red;
+$color-hilite: #ffc;
+
+/* CUSTOM COLOURS */
+/* colour - color, background, border, hover */
+/* I may need 2 or 3 of these */
+
+$color-primary: $brand-color;
+
+// For c-btn-secondary
+// $color-secondary: #2ba477 ;
+// $color-secondary: #128277;
+$color-secondary: #ccccff;
+$color-secondary-bg-hover: #6bc4c7; // slightly darker than $color-btn so it reflect it is selected
+$color-secondary-bg-hover: darken(
+	$color-secondary,
+	10%
+); // slightly darker than $color-btn so it reflect it is selected
+
+$color-tertiary: #7777ff;
+// $color-tertiary-bg-hover: #4444ff;
+$color-tertiary-bg-hover: darken($color-tertiary, 10%);
+
+/* This is handy for inline css, css only for that page
+*  l-colour or brand-colour
+* Work out how I'll do this, I don't want many css variables
+* maybe just --color-brand, --color-primary, --color-secondary
+*/
+
+/* Not sure how to use these classes */
+// .color-brand { color: $color-brand; }
+// .bg-color-brand { background-color: $color-brand; }
+// .b-color-brand { border-color: $color-brand; }
+// .hover-color-brand:hover { color: $color-brand; }
+// .hover-bg-color-brand:hover { background-color: $color-brand; }
+// .hover-b-color-brand:hover { border-color: $color-brand; }
+
+.c-p {
+	color: $color-brand;
+}
+
+.bg-p {
+	background-color: $color-brand;
+}
+
+.b-p {
+	border-color: $color-brand;
+}
+
+.hover-c-p:hover {
+	color: $color-brand;
+}
+
+.hover-bg-p:hover {
+	background-color: $color-brand;
+}
+
+.hover-b-p:hover {
+	border-color: $color-brand;
+}
+
+.c-s {
+	color: $color-secondary;
+}
+
+.bg-s {
+	background-color: $color-secondary;
+}
+
+.b-s {
+	border-color: $color-secondary;
+}
+
+.hover-c-s:hover {
+	color: $color-secondary;
+}
+
+.hover-bg-s:hover {
+	background-color: $color-secondary;
+}
+
+.hover-b-s:hover {
+	border-color: $color-secondary;
+}
+
+.c-t {
+	color: $color-tertiary;
+}
+
+.bg-t {
+	background-color: $color-tertiary;
+}
+
+.b-t {
+	border-color: $color-tertiary;
+}
+
+.hover-c-t:hover {
+	color: $color-tertiary;
+}
+
+.hover-bg-t:hover {
+	background-color: $color-tertiary;
+}
+
+.hover-b-t:hover {
+	border-color: $color-tertiary;
+}
+
+.c-white {
+	color: #ffffff;
+}
+
+.bg-white {
+	background-color: #ffffff;
+}
+
+.c-black {
+	color: #000000;
+}
+
+.bg-black {
+	background-color: #000000;
+}
+
+.c-red {
+	color: $color-negative2;
+}
+
+.bg-red {
+	background-color: $color-negative2;
+}
+
+// for warning labels
+.b-warn {
+	border-color: #c23934 !important;
+}
+
+.bg-warn {
+	background-color: #f6e2e1 !important;
+}
+
+// Not sure if these will be needed, links and buttons are specific
+
+// Page
+$inuit-base-background-color: #f9f9f9;
+$inuit-base-text-color: $color-gray;
+
+// Text
+// Headings
+// $color-headings: $color-pink;
+$color-headings: #000000;
+$color-heading-sub: $color-gray;
+
+// Links
+$color-link: #3980f2;
+$color-link-bg-hover: $color-brand;
+$color-link-hover: darken($color-link, 12%);
+$color-link-focus: darken($color-link, 12%);
+$color-link-outline: $color-brand;
+
+//  $input
+$color-fld-font: #3d474d;
+
+/* border, hover, outline colors should be set
+  depending on what type of field it is
+  set in fields.scss
+*/
+
+// Buttons
+// Alternatively, we could use variables to make the same code customizable for different button types
+$color-btn-bg: $color-brand;
+$color-btn-color: #000000;
+$color-btn-border: $color-secondary;
+// $color-btn-outline: 1px solid $color-brand;
+$color-btn-outline: none;
+
+$color-btn-hover-bg: darken($color-brand, 20%);
+$color-btn-hover-color: #000000;
+$color-btn-hover-border: $color-secondary;
+// $color-btn-outline: 1px solid $color-brand;
+$color-btn-hover-outline: none;
+
+$color-btn-focus-bg: darken($color-brand, 20%);
+$color-btn-focus-color: #000000;
+$color-btn-focus-border: $color-secondary;
+// $color-btn-outline: 1px solid $color-brand;
+$color-btn-focus-outline: none;
+
+// Background Colors
+$bg-color-gray: #fafafa;
+
+// Border
+$color-border: #ecf0f1;
+
+// Iconic
+$color-iconic: $color-gray-ui;
+
+// Page head
+$color-masthead: white;
+$color-page-head-border: $color-brand;
+$color-page-header: $color-brand;
+// $color-page-head-background:    $color-brand;
+$color-page-head-background: white;
+
+// Site nav
+$color-site-nav: $inuit-base-text-color;
+$color-sub-menu-border: $color-gray-ui;
+$color-sub-menu-link: $color-gray;
+$color-sub-menu-link-hover: $color-link;
+
+// Secondary nav
+$color-nav-secondary: $color-gray-light;
+$color-nav-secondary-text: $color-gray;
+
+// Page foot
+$color-page-foot: $color-brand;
+
+// Page micro
+$color-page-micro: #fff;
+$color-page-micro-background: $color-gray;
+
+// Quotes
+$color-quote: $color-gray-mid;
+$color-quote--banner: $color-gray;
+
+// Boxes
+$color-box-highlight-background: $color-highlight;
+$color-box-highlight-border: $color-gray-ui;
+$color-box-tint-background: $color-tint;
+
+// Bands
+$color-band-highlight-background: $color-highlight;
+$color-band-tint-background: $color-tint;
+$color-band-dark: #fff;
+$color-band-dark-background: $color-gray;
+$color-band-attention: #fff;
+$color-band-attention-background: $color-brand;

@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+
+// .o-container: the outer container for components and it usually provides a fixed width.
+
+$o-container-padding: 20px;
+$o-container-max-width-m1: 450px; //min-width: 576px
+$o-container-max-width-m2: 740px; //min-width: 768px
+$o-container-max-width-m3: 960px; // min-width: 992px)
+$o-container-max-width-m4: 1250px; // min-width: 1250px
+
+.o-container {
+	width: 100%;
+	padding-right: $o-container-padding;
+	padding-left: $o-container-padding;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 576px) {
+	.o-container {
+		max-width: $o-container-max-width-m1;
+	}
+}
+
+@media (min-width: 768px) {
+	.o-container {
+		max-width: $o-container-max-width-m2;
+	}
+}
+
+@media (min-width: 992px) {
+	.o-container {
+		max-width: $o-container-max-width-m3;
+	}
+}
+
+@media (min-width: 1250px) {
+	.o-container {
+		max-width: $o-container-max-width-m4;
+	}
+}

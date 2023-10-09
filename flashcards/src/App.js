@@ -4,16 +4,17 @@ import Header from "./components/Header"
 import FlashcardList from "./components/FlashcardList"
 
 function decodeString(str) {
-	const textArea = document.createElement("textarea")
-	textArea.innerHTML = str
+	const textArea = document.createEleme
 	return textArea.value
 }
 
+// https://www.youtube.com/watch?v=hEtZ040fsD8
+// How To Build A Flashcard Quiz With React
+// 51 mins
 export default function App() {
 	const [flashcards, setFlashcards] = useState([])
 	const [categories, setCategories] = useState([])
 	const [category, setCategory] = useState(0)
-	// const [flashcards, setFlashcards] = useState(SAMPLE_DATA)
 
 	const url = (categoryId) =>
 		categoryId
@@ -23,7 +24,6 @@ export default function App() {
 	function handleFilter(categoryId) {
 		console.log("category - " + categoryId)
 		setFlashcards(flashcards.filter((flashcard) => flashcard.category === categoryId))
-		// return flashcards
 	}
 
 	useEffect(() => {
