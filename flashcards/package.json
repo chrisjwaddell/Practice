@@ -12,7 +12,8 @@
 		"build-sass": "sass src/style/scss/_0-main.scss:dist/style/main.css",
 		"build-css-files": "copyfiles -u 1 \"src/style/*.css\" dist",
 		"build-html": "copyfiles -u 1 \"src/*.html\" dist",
-		"build-img": "copyfiles -u 1 \"src/img/*.html\" dist/img"
+		"build-img": "copyfiles -u 1 \"src/img/*.html\" dist/img",
+		"clean-dist": ""
 	},
 	"keywords": [],
 	"author": "",

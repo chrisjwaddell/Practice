@@ -1,0 +1,57 @@
+REACT WEBPACK BOILERPLATE NOTES
+
+*******************************************************************************
+
+open multiple terminals
+on 2nd computer screen
+
+Powershell is good at showing linting errors
+
+
+
+Powershell - npm run lint-dev
+npm run lint
+
+
+The up down arrows seem to only work in DOS not git-bash
+ES Lint config
+
+
+
+Git bash
+npm - npm run build-css
+
+
+
+
+
+It returns a function
+process.env.mode is the old way
+
+webpack --mode development
+
+webpack.config.js
+
+module.exports = (env, argv) => {
+  console.log(argv.mode)        // outputs development
+  return {
+    // All your other custom config...
+  }
+}
+
+
+
+argv gets the arguments as an object rather than an array like process.argv - not sure how that works
+
+
+
+
+
+
+
+
+
+
+
+
+____

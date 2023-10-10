@@ -1,0 +1,200 @@
+0-To Do.txt
+----------------
+
+node: true
+maybe on server
+
+
+
+
+
+
+To make a more thorough boilerplate
+
+
+
+* Compatible with React
+
+
+
+"parser": "@babel/eslint-parser",
+"plugins": ["react", "react-hooks", "import", "jsx-a11y", "prettier"],
+
+
+https://stackoverflow.com/questions/70610141/failed-to-load-config-ljharb-to-extend-from-eslint-8-webpack-5
+
+eslint
+eslint-plugin-react
+eslint-plugin-react-hooks
+
+* react and eslint - these 3 packages
+
+
+eslint-config-react-app
+
+
+what are these?
+
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-plugin-compat": "^0.1.1",
+    "eslint-plugin-promise": "^3.4.0",
+
+
+eslint-plugin-jsx-a11y????
+eslint-plugin-promise????
+
+
+
+eslint-config-prettier
+Disables the prettier settings that have something to do with how the code looks
+
+
+https://www.youtube.com/watch?v=xinJSYiOB6Q
+- 10 mins - single quote, double quote - Prettier and ESLint
+
+
+make a shortcut to this boilerplate
+
+Put in here
+E:\programming\Web-New-Project\Linter\.eslintrc
+Have different setups
+
+ESLint config is for React-browser
+
+
+
+
+
+* JS
+
+eslint-webpack-plugin
+eslint-webpack-plugin has a low active ecosystem.
+At the moment I don't know if I need this. It creates extra setup time.
+Leave it for now
+VS Code does the job
+
+It might be a way to have multiple different rules in different directories
+vs
+different .eslintrc files in different directories
+
+
+eslint-webpack-plugin is for build tools
+Your live dev-server can produce errors and warnings if you don't have an IDE with an eslint extension.
+gives extra consistency across your developers. Not every IDE extension is the same behavior-wise.
+
+
+https://jontorrado.medium.com/working-with-webpack-4-es6-postcss-with-preset-env-and-more-93b3d77db7b2
+ESLint in webpack
+PostCSS
+Stylelint
+The links at the bottom are good
+
+
+
+Prettier could be tricky
+
+
+
+https://blog.logrocket.com/modern-faster-alternatives-eslint/
+- 80% - 
+ESlint on code after Babel gets to it
+module.exports = {
+ parser: "@babel/eslint-parser",
+};
+
+eslint-webpack-plugin is much faster
+It works for Webpack 5, not 4
+
+
+Uglify
+minifying js
+
+
+
+
+
+* CSS
+
+PostCSS
+
+Sass npm package to build it
+npm run build-css
+
+later
+
+CSSNano - uglify for CSS
+
+CSSNext - babel of CSS
+autoprefixer
+
+![Autoprefixer](https://github.com/postcss/autoprefixer)
+https://github.com/postcss/autoprefixer#using-environment-variables-to-support-css-grid-prefixes-in-create-react-app
+
+
+stylelint - ESLint for CSS
+https://stylelint.io/
+
+
+
+minifying css
+not really needed too much
+just take comments out
+and autoprefixer is good and a few other things
+
+
+
+
+
+* Server - Express
+
+This might already be in
+It's express
+I may need a different eslintrc file
+"node"
+
+Server
+create server dir
+index.js
+
+		"server": "nodemon server/index.js"
+
+
+
+
+
+* README
+
+Make mine better like this:
+https://github.com/rwieruch/advanced-react-webpack-babel-setup/blob/master/README.md
+
+
+
+
+* Testing
+
+
+"test": "jest --watchAll --coverage --config=configs/jest.json"
+
+https://github.com/theskillwithin/react-bolt/tree/master/config/tests
+
+https://github.com/theskillwithin/react-bolt/tree/master/tests
+
+
+
+
+
+*******************************************************************************
+
+
+
+Maybe when I put on github
+
+
+
+* webpack txt - ^- Composing Configuration
+
+
+
+
+
+

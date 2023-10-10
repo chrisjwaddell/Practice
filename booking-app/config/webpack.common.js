@@ -1,5 +1,5 @@
 const { merge } = require("webpack-merge")
-const path = require("path")
+// const path = require("path")
 const paths = require("./paths")
 const loaders = require("./loaders")
 const plugins = require("./plugins")
@@ -33,19 +33,24 @@ const commonConfig = {
 
 // Choose the parts in webpack.parts that you want to add
 const developmentParts = {
-	devtool: parts().devtool,
-	devServer: parts().devServer,
+	devtool: parts().devtoolDev,
+	devServer: parts().devServerDev,
 }
 
-const productionConfigCombined = productionConfig()
+const productionParts = {
+	devtool: parts().devtoolProd,
+	devServer: parts().devServerProd,
+}
+
+const productionConfigCombined = merge(productionConfig(), productionParts)
 const developmentConfigCombined = merge(developmentConfig(), developmentParts)
 
 const getConfig = (mode) => {
 	switch (mode) {
 		case "production":
-			return merge(commonConfig, productionConfigCombined, { mode })
+			return merge(commonConfig, productionConfigCombined)
 		case "development":
-			return merge(commonConfig, developmentConfigCombined, { mode })
+			return merge(commonConfig, developmentConfigCombined)
 		default:
 			throw new Error(`Trying to use an unknown mode, ${mode}`)
 	}

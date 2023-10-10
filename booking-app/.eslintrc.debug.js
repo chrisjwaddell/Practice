@@ -6,6 +6,12 @@ const base = require("./.eslintrc")
 const developmentRules = {
 	"no-console": "warn",
 	"no-debugger": "warn",
+	"import/no-extraneous-dependencies": [
+		"error",
+		{
+			devDependencies: ["**/webpack.*.js"],
+		},
+	],
 }
 
 const objDevRules = { rules: { ...base.rules, ...developmentRules } }

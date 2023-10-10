@@ -1,10 +1,10 @@
-import path from "path"
+const path = require("path")
 
 module.exports = {
-	root: path.resolve(__dirname, "../", "../"),
-	outputPath: path.resolve(__dirname, "../", "../", "dist"),
-	entry: path.resolve(__dirname, "../", "../", "src", "index.js"),
-	templatePath: path.resolve(__dirname, "../", "../", "src", "index.html"),
+	root: path.resolve(__dirname, "../"),
+	outputPath: path.resolve(__dirname, "../", "dist"),
+	entry: path.resolve(__dirname, "../", "src", "index.js"),
+	templatePath: path.resolve(__dirname, "../", "src", "index.html"),
 	imagesFolder: "img",
 	fontsFolder: "fonts",
 	cssFolder: "style",

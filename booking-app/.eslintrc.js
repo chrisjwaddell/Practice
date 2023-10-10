@@ -17,7 +17,7 @@ module.exports = {
 
 	parserOptions: {
 		ecmaVersion: "latest",
-		sourceType: "script",
+		sourceType: "module",
 		ecmaFeatures: {
 			blockBindings: true,
 			jsx: true,
@@ -50,8 +50,25 @@ module.exports = {
 		// "prettier.endOfLine": "lf",
 		"linebreak-style": ["error", "unix"],
 
+		"array-element-newline": [
+			"error",
+			// {
+			// 	ArrayExpression: "always",
+			// 	ArrayPattern: { minItems: 3 },
+			// },
+			{
+				multiline: true,
+				minItems: 3,
+			},
+		],
+
 		// React options
-		"react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				extensions: [".js", ".jsx"],
+			},
+		],
 		// "prettier.jsxSingleQuote": false,
 		"jsx-quotes": [2, "prefer-double"],
 	},
