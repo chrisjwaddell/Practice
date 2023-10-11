@@ -5,7 +5,8 @@ module.exports = {
 		es2021: true,
 	},
 
-	extends: "airbnb",
+	extends: ["airbnb", "prettier"],
+	plugins: ["react", "prettier"],
 
 	// parser: "babel-eslint",
 
@@ -26,19 +27,12 @@ module.exports = {
 	},
 
 	rules: {
-		// these rules are used with airbnb style guide and overwrite them
+		// these rules are used in combination with airbnb style guide and overwrite them
 		// They also are the same as some specific Prettier settings I prefer
 
-		// "prettier.semi": false,
-		semi: ["error", "never"],
+		"prettier/prettier": ["error"],
 
-		// "prettier.singleQuote": false,
-		quotes: [
-			2,
-			"double",
-			{ allowTemplateLiterals: true, avoidEscape: true },
-		],
-
+		// WHITESPACE
 		// Javascript whitespace and spacing options
 		"no-tabs": ["error", { allowIndentationTabs: true }],
 		// indent: ["error", "tab"],
@@ -50,17 +44,21 @@ module.exports = {
 		// "prettier.endOfLine": "lf",
 		"linebreak-style": ["error", "unix"],
 
-		"array-element-newline": [
-			"error",
-			// {
-			// 	ArrayExpression: "always",
-			// 	ArrayPattern: { minItems: 3 },
-			// },
-			{
-				multiline: true,
-				minItems: 3,
-			},
+		// "prettier.semi": false,
+		semi: ["error", "never"],
+
+		// "prettier.singleQuote": false,
+		quotes: [
+			2,
+			"double",
+			{ allowTemplateLiterals: true, avoidEscape: false },
 		],
+
+		"no-unused-vars": "warn",
+		"func-names": "off",
+
+		"arrow-body-style": "off",
+		"prefer-arrow-callback": "off",
 
 		// React options
 		"react/jsx-filename-extension": [
@@ -70,6 +68,6 @@ module.exports = {
 			},
 		],
 		// "prettier.jsxSingleQuote": false,
-		"jsx-quotes": [2, "prefer-double"],
+		// "jsx-quotes": [2, "prefer-double"],
 	},
 }
