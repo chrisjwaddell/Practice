@@ -1,0 +1,102 @@
+body {
+	background-color: lightblue;
+}
+
+.main-container {
+	background-color: #ffffff;
+}
+
+.header {
+	background-color: orange;
+	padding: 12px 7px;
+}
+
+.header__container {
+	padding: 0 7px;
+}
+
+.header h2 {
+	margin: 0;
+	font-size: 18px;
+}
+
+.header h2 a {
+	color: #ffffff;
+	font-weight: 800;
+	font-family: arial, helvetica, sans-serif;
+	text-decoration: none;
+}
+
+.menu {
+	margin: 0;
+	padding: 4px 2px;
+}
+
+.menu .c-btn {
+	padding: 5px;
+	font-size: 12px;
+	margin: 5px;
+	border-radius: 4px;
+}
+
+.container {
+	/* display: flex; */
+	width: 100%;
+}
+
+.home-image {
+	width: 90%;
+	height: 500px;
+	background-image: url("https://drraa3ej68s2c.cloudfront.net/wp-content/uploads/2019/02/24211315/0f4be43c4171da2bfcd53c97632fc0c8c1c86f858206393bcf7598f2b2ac6da7-770x443.jpg");
+	background-size: cover;
+	margin: 0 auto 50px auto;
+	/* padding: 0 30px 50px 30px; */
+	transition: all 0.5s ease-out;
+}
+
+.home-image:hover {
+	transform: scale(1.1);
+	background-image: url("https://ichef.bbci.co.uk/news/660/cpsprodpb/C267/production/_105776794_oscars_index_reuters_1.jpg");
+}
+
+.main-content {
+	width: 100%;
+	margin: auto;
+	padding-bottom: 50px;
+}
+
+.main-content h2 {
+	text-align: center;
+}
+
+.home-thumbnail-1 {
+	background-image: url("https://new-cdn.mamamia.com.au/mamamia-pwa.appspot.com/cms_images/variations/1200x800-314652919242.jpg");
+}
+
+.home-thumbnail-2 {
+	background-image: url("https://www.j-14.com/wp-content/uploads/2023/03/Copy-of-3-Way-Split-4.jpg?fit=2000%2C2000&quality=86&strip=all");
+}
+
+.home-thumbnail-3 {
+	background-image: url("https://www.aljazeera.com/wp-content/uploads/2023/03/2023-03-13T033814Z_367828994_HP1EJ3D0A3OBZ_RTRMADP_3_AWARDS-OSCARS.jpg?resize=770%2C513&quality=80");
+}
+
+.home-thumbnail-1,
+.home-thumbnail-2,
+.home-thumbnail-3 {
+	background-size: cover;
+	width: 200px;
+	height: 100px;
+	cursor: pointer;
+	transition: transform 0.4s linear;
+}
+
+.home-thumbnail-1:hover,
+.home-thumbnail-2:hover,
+.home-thumbnail-3:hover {
+	transform: scale(1.1);
+}
+
+.thumbnail-container {
+	margin: 0 auto 10px auto;
+}
