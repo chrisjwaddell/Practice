@@ -33,10 +33,16 @@ body {
 }
 
 .menu .c-btn {
-	padding: 5px;
-	font-size: 12px;
+	padding: 4px 5px;
 	margin: 5px;
 	border-radius: 4px;
+}
+
+.menu .c-btn a {
+	display: inline-block;
+	padding: 4px 5px;
+	font-size: 13px;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
 }
 
 .container {

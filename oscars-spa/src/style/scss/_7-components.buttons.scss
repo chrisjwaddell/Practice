@@ -106,25 +106,25 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 	&:active {
 		background-color: $color-btn-hover-bg;
 		color: $color-btn-hover-color;
-		text-decoration: none;
-		border-color: $color-btn-hover-border;
+		// text-decoration: none;
+		// border-color: $color-btn-hover-border;
 		// outline: 1px solid $color-btn-hover-outline;
-		transition:
-			background-color 0.2s linear,
-			color 0.2s linear;
+		// transition:
+		// 	background-color 0.2s linear,
+		// 	color 0.2s linear;
 	}
 
 	&:focus,
 	&:active {
-		background-color: $color-btn-focus-bg;
+		background-color: $color-btn-hover-bg;
 		// color: color-btn-focus;
 		color: $color-btn-focus-color;
-		border-color: $color-btn-focus-border;
+		// border-color: $color-btn-focus-border;
 		// outline: 3px dotted $color-btn-focus-outline;
 		outline: none; // firefox puts a dashed outline on text
-		box-shadow:
-			0 0 0 0.175rem white,
-			0 0 0 0.35rem $color-btn-focus-outline; // on focus keeps this border on the button after the click
+		// box-shadow:
+		// 	0 0 0 0.175rem white,
+		// 	0 0 0 0.35rem $color-btn-focus-outline; // on focus keeps this border on the button after the click
 	}
 }
 
@@ -171,9 +171,9 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 		// color: $color-btn-focus-color-primary;
 		// border-color: $color-btn-focus-border-primary;
 		// outline: 3px dotted $color-btn-focus-outline-primary;
-		box-shadow:
-			0 0 0 0.175rem white,
-			0 0 0 0.35rem $color-btn-focus-outline-primary; // on focus keeps this border on the button after the click
+		// box-shadow:
+		// 	0 0 0 0.175rem white,
+		// 	0 0 0 0.35rem $color-btn-focus-outline-primary; // on focus keeps this border on the button after the click
 	}
 }
 

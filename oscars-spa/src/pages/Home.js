@@ -1,10 +1,11 @@
 import React from "react"
+import PropTypes from "prop-types"
 
-export default function Home() {
+function Home() {
 	return (
 		<div className="main-content">
 			<div className="container">
-				<h2>Heading</h2>
+				<h2>title</h2>
 				<div className="home-image" style={{ height: "500px" }} />
 				<div
 					className="thumbnail-container o-flex o-flex-row x--around y--center"
@@ -18,3 +19,9 @@ export default function Home() {
 		</div>
 	)
 }
+
+// Home.propTypes = {
+// 	title: PropTypes.string.isRequired,
+// }
+
+export default Home
