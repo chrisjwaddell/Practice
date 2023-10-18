@@ -33,14 +33,14 @@ body {
 }
 
 .menu .c-btn {
-	padding: 0;
+	padding: 4px 5px;
 	margin: 5px;
 	border-radius: 4px;
 }
 
 .menu .c-btn a {
 	display: inline-block;
-	padding: 6px;
+	padding: 4px 5px;
 	font-size: 13px;
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
 }
@@ -65,15 +65,14 @@ body {
 	background-image: url("https://ichef.bbci.co.uk/news/660/cpsprodpb/C267/production/_105776794_oscars_index_reuters_1.jpg");
 }
 
-.main-container {
+.main-content {
 	width: 100%;
 	margin: auto;
 	padding-bottom: 50px;
 }
 
-.main-container h2 {
+.main-content h2 {
 	text-align: center;
-	margin-top: 40px;
 }
 
 .home-thumbnail-1 {
@@ -106,31 +105,4 @@ body {
 
 .thumbnail-container {
 	margin: 0 auto 10px auto;
-}
-
-.actors-container {
-	width: 100%;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 50px;
-	padding-bottom: 150px;
-}
-
-.actor-container {
-	width: 250px;
-	height: 250px;
-	margin-top: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 50px;
-}
-
-.actor-container h4 {
-	text-align: center;
-	margin: 0;
-}
-
-.actor-container img {
-	object-fit: cover;
 }

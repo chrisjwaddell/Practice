@@ -1,9 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 function Home() {
 	return (
-		<div className="main-content">
+		<div className="main-container">
 			<div className="container">
 				<h2>title</h2>
 				<div className="home-image" style={{ height: "500px" }} />
@@ -19,9 +18,5 @@ function Home() {
 		</div>
 	)
 }
-
-// Home.propTypes = {
-// 	title: PropTypes.string.isRequired,
-// }
 
 export default Home
