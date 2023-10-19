@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import { NavLink } from "react-router-dom"
 import Home from "../pages/Home"
 import Actors from "../pages/Actors"

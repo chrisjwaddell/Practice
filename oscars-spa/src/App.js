@@ -1,17 +1,17 @@
 import React from "react"
-// import PropTypes from "prop-types"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom"
 import Navbar from "./components/Navbar"
 
 import Home from "./pages/Home"
 import Actors from "./pages/Actors"
+import Actor from "./pages/Actor"
+import ActorsList from "./data/actors"
 
 function App() {
 	return (
 		<div className="o-container">
 			<div className="main-container">
 				<BrowserRouter>
-					{/* <Navbar title="Oscars 2019" /> */}
 					<Routes>
 						<Route
 							path="/"
@@ -22,15 +22,26 @@ function App() {
 								</>
 							}
 						/>
-						<Route
-							path="actors"
-							element={
-								<>
-									<Navbar title="Oscars Actors" />
-									<Actors />
-								</>
-							}
-						/>
+						<Route path="/actors">
+							<Route
+								path=""
+								element={
+									<>
+										<Navbar title="Oscars Actors" />
+										<Actors />
+									</>
+								}
+							/>
+							<Route
+								path=":actorurl"
+								element={
+									<>
+										<Navbar title="Oscars Actorsssss" />
+										<Actor />
+									</>
+								}
+							/>
+						</Route>
 						<Route
 							path="actresses"
 							element={

@@ -129,8 +129,24 @@ body {
 .actor-container h4 {
 	text-align: center;
 	margin: 0;
+	color: black;
 }
 
 .actor-container img {
 	object-fit: cover;
+	transition: transform 0.3s linear;
+}
+
+.actor-container img:hover {
+	transform: scale(1.05);
+}
+
+.back {
+	position: relative;
+	left: 20px;
+	top: 20px;
+	background-color: transparent;
+	color: blue;
+	text-decoration: underline;
+	border: 1px solid #ccc;
 }
