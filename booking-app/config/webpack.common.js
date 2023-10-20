@@ -22,6 +22,26 @@ const commonConfig = {
 	module: {
 		rules: loaders.JSLoader,
 	},
+}
+
+// Choose the parts in webpack.parts that you want to add
+const developmentParts = {
+	devtool: parts().devtoolDev,
+	devServer: parts().devServerDev,
+}
+
+// Choose plugins in plugins.js
+const developmentPlugins = {
+	plugins: [
+		// plugins.CleanWebpackPlugin,
+		// plugins.HtmlWebpackPlugin,
+		// plugins.ESLintPlugin,
+		// plugins.StyleLintPlugin,
+		// plugins.MiniCssExtractPlugin,
+	],
+}
+
+const productionPlugins = {
 	plugins: [
 		plugins.CleanWebpackPlugin,
 		// plugins.HtmlWebpackPlugin,
@@ -31,19 +51,22 @@ const commonConfig = {
 	],
 }
 
-// Choose the parts in webpack.parts that you want to add
-const developmentParts = {
-	devtool: parts().devtoolDev,
-	devServer: parts().devServerDev,
-}
-
 const productionParts = {
 	devtool: parts().devtoolProd,
 	devServer: parts().devServerProd,
 }
 
-const productionConfigCombined = merge(productionConfig(), productionParts)
-const developmentConfigCombined = merge(developmentConfig(), developmentParts)
+const developmentConfigCombined = merge(
+	developmentConfig(),
+	developmentParts,
+	developmentPlugins,
+)
+
+const productionConfigCombined = merge(
+	productionConfig(),
+	productionParts,
+	productionPlugins,
+)
 
 const getConfig = (mode) => {
 	switch (mode) {

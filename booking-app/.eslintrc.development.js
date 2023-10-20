@@ -10,6 +10,7 @@ const developmentRules = {
 		"error",
 		{
 			devDependencies: ["**/webpack.*.js"],
+			// devDependencies: ["**/webpack.*.js", "react-router-dom"],
 		},
 	],
 }

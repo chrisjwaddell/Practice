@@ -36,8 +36,8 @@
 @import "_4-objects.layout.scss";
 // @import "_4-objects.sections.scss";
 // @import "_4-objects.id-section.scss";
-// @import "_4-objects.list-bare.scss";
-// @import "_4-objects.list-inline.scss";
+@import "_4-objects.list-bare.scss";
+@import "_4-objects.list-inline.scss";
 
 // UTILITIES
 @import "_6-utilities.spacings.scss";
@@ -110,7 +110,6 @@
 
 
 
-
 // UTILITIES
 @import "_6-utilities.clearfix.scss";
 
@@ -133,3 +132,6 @@ $inuit-offsets: true;
 // @import "_7-components.buttons.scss";
 // @import "_7-components.strip.scss";
 // @import "_7-components.modal.scss";
+
+// APP SPECIFIC
+@import "app.scss";

@@ -1,0 +1,181 @@
+.navbar {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+	height: 250px;
+	height: auto;
+	// margin: 0 auto;
+	padding-top: 8px;
+	padding-bottom: 60px;
+	background-color: $color-navbar;
+}
+
+.navcontainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.navcontainer .font {
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+	font-weight: 500;
+	color: #ffffff;
+}
+
+.navbar__btns {
+	display: flex;
+	flex-direction: row;
+}
+
+.navbar__btns button {
+	margin: 5px 8px;
+	padding: 5px 10px;
+	font-size: 13px;
+	background-color: $color-gray-light;
+	color: $color-navbar;
+	font-weight: 600;
+	border: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($color-gray-light, 10%);
+		// color: $color-btn-hover-color-tertiary;
+		text-decoration: none;
+		// border-color: $color-btn-hover-border-tertiary;
+		// outline: 1px solid $color-btn-hover-outline-tertiary;
+	}
+	&:focus,
+	&:active {
+		background-color: darken($color-gray-light, 20%);
+		// color: $color-btn-focus-color-tertiary;
+		// border-color: $color-btn-focus-border-tertiary;
+		// outline: 3px dotted $color-btn-focus-outline-tertiary;
+		// box-shadow:
+		// 	0 0 0 0.175rem white,
+		// 	0 0 0 0.35rem $color-btn-focus-outline-tertiary; // on focus keeps this border on the button after the click
+	}
+}
+
+.navbar__register {
+	background-color: transparent;
+}
+
+.navbar__login {
+	background-color: transparent;
+}
+
+.header {
+	// margin: 0 auto;
+	color: #ffffff;
+}
+
+.headerlistitems {
+	display: flex;
+	align-items: center;
+}
+
+.headerlistitem.active {
+	padding: 10px 10px;
+	border-radius: 15px;
+	border: 1px solid #ffffff;
+}
+.headerlistitem {
+	padding: 4px 7px;
+	color: #ffffff;
+	font-size: 14px;
+	margin-right: 24px;
+}
+
+.headerlistitem svg {
+	padding-right: 10px;
+}
+
+.header h1 {
+	color: #ffffff;
+	margin-top: 40px;
+	font-weight: 600;
+}
+
+.header p {
+	margin-top: 25px;
+	// font-weight: 400;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header button {
+	margin-top: 20px;
+	background-color: lighten($color-navbar, 15%);
+	color: #ffffff;
+	border: none;
+}
+
+.headerSearch {
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	bottom: -30px;
+	width: 80%;
+	height: 60px;
+	margin: 0 auto;
+	padding: 6px 30px;
+	border: 4px solid #ffcc00;
+	border-radius: 4px;
+	background-color: #ffffff;
+}
+
+.headerSearch input {
+	width: 150px;
+	// height: 40px;
+	border: none;
+	width: auto;
+}
+
+.headerSearch button {
+	// margin-top: 20px;
+	// height: 30px;
+	margin: 0;
+	padding: 12px;
+	background-color: $color-navbar;
+	color: #ffffff;
+	border: none;
+	font-size: 14px;
+}
+
+.headerSearch .inputs {
+	width: calc(100% - 100px);
+}
+
+.headerSearch input {
+	margin-left: 1px;
+	margin-right: 5px;
+	outline: none;
+	color: #444444;
+}
+
+.headerSearch input::placeholder {
+	color: #555555;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.headerSearchItem {
+	display: flex;
+	align-items: baseline;
+}
+
+.headerSearch svg {
+	color: #aaaaaa;
+	margin-right: 7px;
+}

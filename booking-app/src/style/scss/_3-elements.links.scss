@@ -2,7 +2,9 @@
 //   #LINKS
 //   ======================================================================== */
 
-$a--primary-before-after-animate: width 100ms ease-in-out, height 199ms ease-in-out 350ms;
+$a--primary-before-after-animate:
+	width 100ms ease-in-out,
+	height 199ms ease-in-out 350ms;
 
 a {
 	text-decoration: none;
@@ -39,14 +41,16 @@ a {
 // https://zellwk.com/blog/creating-focus-style/
 // https://codepen.io/zellwk/pen/KKPvbag
 
-.a--primary {
-	position: relative;
-	color: $color-link;
-	font-weight: 700;
-	z-index: 600;
+.link--primary {
+	// position: relative;
+	// color: $color-link;
+	color: $color-primary;
+	font-weight: 400;
+	// z-index: 600;
 	text-decoration: none;
 	font-family: arial, helvetica, sans-serif;
-	// text-decoration: underline;
+	text-decoration: underline;
+	// text-decoration: none;
 	// border-bottom: 2px solid currentColor;
 
 	//   background: $color-link-bg-hover;
@@ -57,37 +61,41 @@ a {
 	&:active {
 		// text-decoration: underline;
 		// background-color: $color-link-bg-hover;
+		// background-color: $color-link-bg-hover;
 		//   background: $color-link-bg-hover;
 
 		// color: $color-link-hover;
+		// color: #ffffff;
 		// height: 2rem;
 	}
 
 	// when using the tab button
 	&:focus,
 	&:active {
-		outline: 3px dotted $color-link-outline;
-		outline-offset: 2px !important;
+		// outline: 3px dotted $color-link-outline;
+		// outline-offset: 2px !important;
 		// color: $color-link-focus;
 	}
 
-	&:after {
-		content: "";
-		width: 100%;
-		position: absolute;
-		left: 0;
-		bottom: -1px;
-		height: 0.2rem;
-		background: $color-brand;
-		// background: -webkit-linear-gradient(to right, #30e8bf, #ff8235);
-		// background: linear-gradient(to right, #30e8bf, #ff8235);
-		transition: 0.2s;
-		transition: height 0.4s linear, height 0.2s linear;
-		z-index: -1;
-	}
+	// &:after {
+	// 	content: "";
+	// 	width: 100%;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	bottom: -1px;
+	// 	height: 0.2rem;
+	// 	background: $color-brand;
+	// 	// background: -webkit-linear-gradient(to right, #30e8bf, #ff8235);
+	// 	// background: linear-gradient(to right, #30e8bf, #ff8235);
+	// 	transition: 0.2s;
+	// 	transition:
+	// 		height 0.4s linear,
+	// 		height 0.2s linear;
+	// 	z-index: -1;
+	// }
 }
 
-.a--primary:hover:after {
+.link--primary:hover:after {
 	height: 1.3rem;
 }
 

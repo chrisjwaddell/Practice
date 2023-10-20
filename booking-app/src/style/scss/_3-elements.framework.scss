@@ -7,83 +7,13 @@
  *
  */
 
-
-.o-flex {
-	display: flex;
+.tc {
+	text-align: center;
 }
 
-.o-flex--1 {
-	flex: 1;
-}
-
-.o-flex--2 {
-	flex: 2;
-}
-
-.o-flex--3 {
-	flex: 3;
-}
-
-.o-flex--4 {
-	flex: 4;
-}
-
-
-.o-flex.centre {
-	justify-content: center;
-}
-
-.o-flex.right {
-	justify-content: flex-end;
-}
-
-.o-flex.left {
-	justify-content: flex-start;
-}
-
-
-
-.o-flex-row {
-	-webkit-box-orient: horizontal !important;
-	-webkit-box-direction: normal !important;
-	-ms-flex-direction: row !important;
-	flex-direction: row !important;
-}
-
-.o-flex-column {
-	-webkit-box-orient: vertical !important;
-	-webkit-box-direction: normal !important;
-	-ms-flex-direction: column !important;
-	flex-direction: column !important;
-}
-
-.o-flex-row-reverse {
-	-webkit-box-orient: horizontal !important;
-	-webkit-box-direction: reverse !important;
-	-ms-flex-direction: row-reverse !important;
-	flex-direction: row-reverse !important;
-}
-
-.o-flex-column-reverse {
-	-webkit-box-orient: vertical !important;
-	-webkit-box-direction: reverse !important;
-	-ms-flex-direction: column-reverse !important;
-	flex-direction: column-reverse !important;
-}
-
-.o-flex-wrap {
-	-ms-flex-wrap: wrap !important;
-	flex-wrap: wrap !important;
-}
-
-.o-flex-nowrap {
-	-ms-flex-wrap: nowrap !important;
-	flex-wrap: nowrap !important;
-}
-
-.o-flex-wrap-reverse {
-	-ms-flex-wrap: wrap-reverse !important;
-	flex-wrap: wrap-reverse !important;
+.mac {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .dib {
@@ -115,6 +45,31 @@
 }
 
 // Usually used for testing
+.b-black {
+	border: 1px solid #000000;
+}
+
+.mt-tiny {
+	margin-top: $inuit-global-spacing-unit-tiny;
+}
+
+.mt-small {
+	margin-top: $inuit-global-spacing-unit-small;
+}
+
+.mt {
+	margin-top: $inuit-global-spacing-unit;
+}
+
+.mt-large {
+	margin-top: $inuit-global-spacing-unit-large;
+}
+
+.mt-huge {
+	margin-top: $inuit-global-spacing-unit-huge;
+}
+
+// Good to use for testing
 .b-black {
 	border: 1px solid #000000;
 }

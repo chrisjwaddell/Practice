@@ -2,7 +2,6 @@
 //   #BUTTONS
 //   ==========================================================================
 
-
 //
 // This is an example component. Extend inuitcss by building your own components
 // that make up your UI. Component classes are prefixed with a `c-`.
@@ -24,24 +23,24 @@
 
 //
 // Primary button settings
-$color-btn-bg-primary: $color-brand;
-$color-btn-color-primary: #000000;
+$color-btn-bg-primary: $color-gray-light;
+$color-btn-color-primary: $color-primary;
 $color-btn-border-primary: $color-btn-bg-primary;
 $color-btn-outline-primary: $color-btn-border-primary;
 // $btn-border-radius-primary: $global-btn-border-radius;
 $btn-border-radius-primary: 6px;
 
-$color-btn-hover-bg-primary: darken($color-btn-bg-primary, 5%);
+$color-btn-hover-bg-primary: $color-primary;
 $color-btn-hover-color-primary: #ffffff;
-$color-btn-hover-border-primary: $color-btn-hover-bg-primary;
+$color-btn-hover-border-primary: $color-primary;
 // $color-btn-outline-primary: 1px solid $color-brand;
-$color-btn-hover-outline-primary: $color-btn-hover-bg-primary;
+$color-btn-hover-outline-primary: $color-primary;
 
 $color-btn-focus-bg-primary: darken($color-btn-bg-primary, 10%);
 $color-btn-focus-color-primary: #000000;
-$color-btn-focus-border-primary: $color-secondary;
+$color-btn-focus-border-primary: $color-primary;
 // $color-btn-outline-primary: 1px solid $color-secondary;
-$color-btn-focus-outline-primary: $color-btn-focus-bg-primary;
+$color-btn-focus-outline-primary: $color-primary;
 
 //
 // Secondary button settings
@@ -107,21 +106,25 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 	&:active {
 		background-color: $color-btn-hover-bg;
 		color: $color-btn-hover-color;
-		text-decoration: none;
-		border-color: $color-btn-hover-border;
+		// text-decoration: none;
+		// border-color: $color-btn-hover-border;
 		// outline: 1px solid $color-btn-hover-outline;
-		transition: background-color 0.2s linear, color 0.2s linear;
+		// transition:
+		// 	background-color 0.2s linear,
+		// 	color 0.2s linear;
 	}
 
 	&:focus,
 	&:active {
-		background-color: $color-btn-focus-bg;
+		background-color: $color-btn-hover-bg;
 		// color: color-btn-focus;
 		color: $color-btn-focus-color;
-		border-color: $color-btn-focus-border;
+		// border-color: $color-btn-focus-border;
 		// outline: 3px dotted $color-btn-focus-outline;
 		outline: none; // firefox puts a dashed outline on text
-		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline; // on focus keeps this border on the button after the click
+		// box-shadow:
+		// 	0 0 0 0.175rem white,
+		// 	0 0 0 0.35rem $color-btn-focus-outline; // on focus keeps this border on the button after the click
 	}
 }
 
@@ -149,12 +152,14 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 	// border-style: solid;
 	// border-color: $color-btn-border-primary;
 	// outline: 1px solid $color-btn-outline-primary;
-	transition: background-color 0.2s linear, color 0.2s linear;
+	transition:
+		background-color 0.2s linear,
+		color 0.2s linear;
 
 	&:hover,
 	&:focus,
 	&:active {
-		background-color: darken($color-btn-hover-bg-primary, 10%);
+		background-color: darken($color-btn-bg-primary, 20%);
 		color: $color-btn-hover-color-primary;
 		text-decoration: none;
 		// border-color: $color-btn-hover-border-primary;
@@ -162,11 +167,13 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 	}
 	&:focus,
 	&:active {
-		background-color: darken($color-btn-focus-bg-primary, 20%);
+		background-color: darken($color-btn-focus-bg-primary, 30%);
 		// color: $color-btn-focus-color-primary;
 		// border-color: $color-btn-focus-border-primary;
 		// outline: 3px dotted $color-btn-focus-outline-primary;
-		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline-primary; // on focus keeps this border on the button after the click
+		// box-shadow:
+		// 	0 0 0 0.175rem white,
+		// 	0 0 0 0.35rem $color-btn-focus-outline-primary; // on focus keeps this border on the button after the click
 	}
 }
 
@@ -178,7 +185,9 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 	// border-style: solid;
 	// border-color: $color-btn-border-secondary;
 	// outline: 1px solid $color-btn-outline-secondary;
-	transition: background-color 0.2s linear, color 0.2s linear;
+	transition:
+		background-color 0.2s linear,
+		color 0.2s linear;
 
 	&:hover,
 	&:focus,
@@ -195,7 +204,9 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 		// color: $color-btn-focus-color-secondary;
 		// border-color: $color-btn-focus-border-secondary;
 		// outline: 3px dotted $color-btn-focus-outline-secondary;
-		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline-secondary; // on focus keeps this border on the button after the click
+		box-shadow:
+			0 0 0 0.175rem white,
+			0 0 0 0.35rem $color-btn-focus-outline-secondary; // on focus keeps this border on the button after the click
 	}
 }
 
@@ -207,7 +218,9 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 	// border-style: solid;
 	// border-color: $color-btn-border-tertiary;
 	// outline: 1px solid $color-btn-outline-tertiary;
-	transition: background-color 0.2s linear, color 0.2s linear;
+	transition:
+		background-color 0.2s linear,
+		color 0.2s linear;
 
 	&:hover,
 	&:focus,
@@ -224,7 +237,9 @@ $color-btn-focus-outline-tertiary: $color-btn-focus-bg-tertiary;
 		// color: $color-btn-focus-color-tertiary;
 		// border-color: $color-btn-focus-border-tertiary;
 		// outline: 3px dotted $color-btn-focus-outline-tertiary;
-		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-btn-focus-outline-tertiary; // on focus keeps this border on the button after the click
+		box-shadow:
+			0 0 0 0.175rem white,
+			0 0 0 0.35rem $color-btn-focus-outline-tertiary; // on focus keeps this border on the button after the click
 	}
 }
 
@@ -331,7 +346,9 @@ $btn-ghost-border-width: 2px;
 	&:focus,
 	&:active {
 		background-color: darken($color-positive, 10%);
-		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-positive;
+		box-shadow:
+			0 0 0 0.175rem white,
+			0 0 0 0.35rem $color-positive;
 	}
 }
 
@@ -346,6 +363,8 @@ $btn-ghost-border-width: 2px;
 	&:focus,
 	&:active {
 		background-color: darken($color-gray-mid, 10%);
-		box-shadow: 0 0 0 0.175rem white, 0 0 0 0.35rem $color-gray-mid;
+		box-shadow:
+			0 0 0 0.175rem white,
+			0 0 0 0.35rem $color-gray-mid;
 	}
 }
