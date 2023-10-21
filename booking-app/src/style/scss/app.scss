@@ -113,7 +113,7 @@
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header button {
+.header .signin {
 	margin-top: 20px;
 	background-color: lighten($color-navbar, 15%);
 	color: #ffffff;
@@ -142,7 +142,7 @@
 	width: auto;
 }
 
-.headerSearch button {
+.headerSearch .search {
 	// margin-top: 20px;
 	// height: 30px;
 	margin: 0;
@@ -162,6 +162,7 @@
 	margin-right: 5px;
 	outline: none;
 	color: #444444;
+	width: 100%;
 }
 
 .headerSearch input::placeholder {
@@ -175,7 +176,64 @@
 	align-items: baseline;
 }
 
-.headerSearch svg {
+.headerSearch .svg-inline--fa {
 	color: #aaaaaa;
 	margin-right: 7px;
+}
+
+.rdrDays,
+.rdrMonth {
+	font-size: 12px;
+}
+
+.rdrCalendarWrapper {
+	font-size: 12px;
+}
+
+.rdrInputRangeInput {
+	margin: 0 5px 0;
+}
+
+.rdrStaticRangeLabel,
+.rdrInputRange {
+	color: #000000;
+}
+
+.headerSearchItem__peoplePopup {
+	position: absolute;
+	// bottom: calc(-100% - 60px);
+	// right: 20%;
+	top: 50px;
+	width: 200px;
+	height: auto;
+	padding: 5px;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.headerSearchItem__peoplePopup div {
+	margin-top: 5px;
+}
+
+.headerSearchItem__peoplePopup button {
+	color: #000000;
+	border: 1px solid #7788cc;
+	border-radius: 4px;
+}
+
+.headerSearchItem__peoplePopup span {
+	color: #444444;
+}
+
+.headerSearchItem__peoplePopup .count {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.datepicker {
+	position: absolute;
+	bottom: calc(-100% - 60px);
+	right: 20%;
 }

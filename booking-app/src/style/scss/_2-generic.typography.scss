@@ -4,16 +4,14 @@
 
 /**
  * All font-sizes are based on the rem (root em). This makes it easier to increase font size on
- * small devices and generally easier to manage. 
+ * small devices and generally easier to manage.
  * rem is like a CSS variable for typography.
  * <p> default font-size: 1.25rem
  */
 
-
 :root {
-    font-size: $inuit-global-font-size;
+	font-size: $inuit-global-font-size;
 }
-
 
 a,
 abbr,
@@ -92,9 +90,8 @@ button,
 optgroup,
 select,
 textarea {
-    font-size: 1rem;
+	font-size: 1rem;
 }
-
 
 h1,
 h2,
@@ -102,22 +99,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+	font-weight: 600;
 }
-
 
 /* set this as a default for p font. 16-20px is standard for desktop view. 16px is rem */
 p {
-    font-size: 1.25rem;
-    line-height: 1.4;
+	font-size: 1.25rem;
+	line-height: 1.4;
 }
 
 @media screen and (max-width: 899px) {
-    p {
-        font-size: 1.125rem;
-    }
+	p {
+		font-size: 1.125rem;
+	}
 }
-
 
 h1,
 h2,
@@ -136,7 +131,7 @@ table,
 fieldset,
 figure,
 pre {
-    margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 /**
@@ -146,5 +141,5 @@ pre {
 ul,
 ol,
 dd {
-    margin-left: 1rem;
+	margin-left: 1rem;
 }
