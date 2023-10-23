@@ -1,10 +1,11 @@
 import React from "react"
+import propTypes from "prop-types"
 import Header from "./Header"
 
-export default function Navbar() {
+function Navbar({ mode }) {
 	return (
 		<div className="navbar">
-			<div className="navcontainer">
+			<div className="navcontainer .font">
 				<span className="logo">lama booking</span>
 				<div className="navbar__btns">
 					<button type="button" className="navbar__register c-btn">
@@ -15,7 +16,13 @@ export default function Navbar() {
 					</button>
 				</div>
 			</div>
-			<Header />
+			<Header mode={mode} />
 		</div>
 	)
 }
+
+Navbar.propTypes = {
+	mode: propTypes.string.isRequired,
+}
+
+export default Navbar

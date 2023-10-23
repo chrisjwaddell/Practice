@@ -201,29 +201,38 @@
 
 .headerSearchItem__peoplePopup {
 	position: absolute;
+	z-index: 5000;
 	// bottom: calc(-100% - 60px);
 	// right: 20%;
-	top: 50px;
-	width: 200px;
+	top: 60px;
+	width: 250px;
 	height: auto;
-	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 12px;
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
 	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
 }
 
 .headerSearchItem__peoplePopup div {
-	margin-top: 5px;
+	// margin-top: 8px;
+	font-size: 18px;
 }
 
 .headerSearchItem__peoplePopup button {
 	color: #000000;
-	border: 1px solid #7788cc;
+	border: 1px solid #5577dd;
 	border-radius: 4px;
+	width: 32px;
+	height: 32px;
 }
 
 .headerSearchItem__peoplePopup span {
 	color: #444444;
+	width: 20px;
+	text-align: center;
 }
 
 .headerSearchItem__peoplePopup .count {
@@ -232,8 +241,74 @@
 	align-items: center;
 }
 
+.headerSearchItem__peoplePopup .count button:disabled {
+	cursor: not-allowed;
+}
+
 .datepicker {
 	position: absolute;
 	bottom: calc(-100% - 60px);
 	right: 20%;
+	z-index: 5000;
+}
+
+.listContainer,
+.featuredContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.featured {
+	position: relative;
+	flex: 1;
+	// width: 370px;
+	// height: 400px;
+	z-index: 100;
+}
+.featured img {
+	width: 370px;
+	height: 370px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.featured__city,
+.featured__properties {
+	position: absolute;
+	color: #ffffff;
+	left: 5px;
+	font-weight: 600;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+}
+
+.featured__city {
+	bottom: 90px;
+	font-size: 38px;
+}
+
+.featured__properties {
+	bottom: 40px;
+	font-size: 24px;
+}
+
+.homeTitle {
+	width: 1024px;
+	margin-top: 25px;
+	font-size: 20px;
+}
+
+.listImage {
+	width: 370px;
+	height: 400px;
+}
+.listImage img {
+	width: 370px;
+	height: 370px;
+	object-fit: cover;
+	border-radius: 15px;
 }
